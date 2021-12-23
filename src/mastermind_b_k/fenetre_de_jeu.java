@@ -28,6 +28,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         grilleJeu = new javax.swing.JPanel();
+        panneau_jeu = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -41,24 +42,30 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(153, 153, 153));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        grilleJeu.setBackground(new java.awt.Color(204, 204, 204));
         grilleJeu.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        grilleJeu.setLayout(new java.awt.GridLayout(12, 4));
+        getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 400, 1200));
 
-        javax.swing.GroupLayout grilleJeuLayout = new javax.swing.GroupLayout(grilleJeu);
-        grilleJeu.setLayout(grilleJeuLayout);
-        grilleJeuLayout.setHorizontalGroup(
-            grilleJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 416, Short.MAX_VALUE)
+        panneau_jeu.setBackground(new java.awt.Color(255, 204, 255));
+
+        javax.swing.GroupLayout panneau_jeuLayout = new javax.swing.GroupLayout(panneau_jeu);
+        panneau_jeu.setLayout(panneau_jeuLayout);
+        panneau_jeuLayout.setHorizontalGroup(
+            panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 180, Short.MAX_VALUE)
         );
-        grilleJeuLayout.setVerticalGroup(
-            grilleJeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 986, Short.MAX_VALUE)
+        panneau_jeuLayout.setVerticalGroup(
+            panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
         );
 
-        getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 990));
+        getContentPane().add(panneau_jeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 1320, 180, 60));
 
-        pack();
+        setBounds(0, 0, 1033, 1429);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -99,5 +106,6 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel grilleJeu;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel panneau_jeu;
     // End of variables declaration//GEN-END:variables
 }

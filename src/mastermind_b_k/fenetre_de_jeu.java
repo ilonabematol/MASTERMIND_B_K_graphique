@@ -38,6 +38,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         grilleAnalyse = new javax.swing.JPanel();
         panneau_affichage = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
@@ -65,7 +67,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         grilleJeu.setBackground(new java.awt.Color(204, 204, 204));
         grilleJeu.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         grilleJeu.setLayout(new java.awt.GridLayout(12, 4));
-        getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 400, 1200));
+        getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 400, 650));
 
         panneau_jeu.setBackground(new java.awt.Color(255, 204, 204));
 
@@ -96,7 +98,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                     .addGroup(panneau_jeuLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
@@ -110,11 +112,11 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 18, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        getContentPane().add(panneau_jeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 1250, 320, 60));
+        getContentPane().add(panneau_jeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 60, 300, 80));
 
         jButton2.setText("4");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -150,34 +152,41 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
 
         grilleAnalyse.setBackground(new java.awt.Color(255, 204, 204));
         grilleAnalyse.setToolTipText("");
-
-        javax.swing.GroupLayout grilleAnalyseLayout = new javax.swing.GroupLayout(grilleAnalyse);
-        grilleAnalyse.setLayout(grilleAnalyseLayout);
-        grilleAnalyseLayout.setHorizontalGroup(
-            grilleAnalyseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
-        );
-        grilleAnalyseLayout.setVerticalGroup(
-            grilleAnalyseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 150, 1200));
+        grilleAnalyse.setLayout(new java.awt.GridLayout(1, 2));
+        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 150, 650));
 
         panneau_affichage.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
+        jLabel3.setText("GAME");
+
+        jTextField2.setText("jTextField2");
 
         javax.swing.GroupLayout panneau_affichageLayout = new javax.swing.GroupLayout(panneau_affichage);
         panneau_affichage.setLayout(panneau_affichageLayout);
         panneau_affichageLayout.setHorizontalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(panneau_affichageLayout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
+                .addGroup(panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_affichageLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(115, 115, 115))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_affichageLayout.createSequentialGroup()
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))))
         );
         panneau_affichageLayout.setVerticalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 220, Short.MAX_VALUE)
+            .addGroup(panneau_affichageLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
-        getContentPane().add(panneau_affichage, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 40, 300, 220));
+        getContentPane().add(panneau_affichage, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, 300, 110));
 
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -256,7 +265,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 300, 390));
 
-        setBounds(0, 0, 997, 1378);
+        setBounds(0, 0, 1011, 757);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -338,9 +347,11 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel panneau_affichage;
     private javax.swing.JPanel panneau_jeu;
     // End of variables declaration//GEN-END:variables

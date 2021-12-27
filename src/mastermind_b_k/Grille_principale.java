@@ -85,7 +85,7 @@ public class Grille_principale {
             // a chaque passage de niveau(nouvel ligne) clear le tableau d'indice et même tout les autres ArrayList: --> l'affichage restera;
             // on n'a pas besoin de stocker les valeurs des ArrayList(sauf pour réafficher a chaque fois les niveaux du joueur
             //clear ArrayLists
-            /*
+            
             int col = line * 4;
             int compteur = 0;
             for (int i = 0; i < 4; i++) {
@@ -100,6 +100,7 @@ public class Grille_principale {
                         Verif.set(col, true);
                         Indice.set(col, 0);
                         compteur += 1;
+                        //pour savoir si 4 indices sont == a 4
                     }
                 }
 
@@ -121,6 +122,19 @@ public class Grille_principale {
                         col++;
                     }
                 }
+            }
+            for (int k=col; k<col+4 ; k++){
+                if (Verif.get(k)!=true){
+                   for (int j=0;j<4;j++){
+                    if (Jeu_Joueur.get(k)==(tabOrdi[j])){  // si on fait ca cela analyse tout le tableau array --> donc pas possible
+                        //test: si col=line*4=4
+                        //Jeu_Joueur.get(4)==(tabOrdi[0])
+                        
+                            Indice.set(k,1);
+                            Verif.set(k,true);
+                       
+                     } 
+            }
                 /*
             for 
              JJ=(ArrayList<String>) Jeu_Joueur.subList(col,col+4);
@@ -167,7 +181,7 @@ public class Grille_principale {
         
         
         // idée pour les boucles
-        int colencours = line * 4;// on enregistre la ligne finale dans une variable pour ensuite reparcourir a +4
+        int col = line * 4;// on enregistre la ligne finale dans une variable pour ensuite reparcourir a +4
         for (int indtabOrdi = 0; indtabOrdi < 4; indtabOrdi++) { // on parcourt de 0 à +4 // double boucle imbriquée 1) qui parcourt chaque case de la liste alétoire de l'ordi 
             //     for(int indjou=0 ; indjou < colencours+4 ; indjou++){
             if (Jeu_Joueur.contains(tabOrdi[indtabOrdi])) {  ///2) on verifie si il y a une couleur similaire
@@ -202,7 +216,7 @@ public class Grille_principale {
             }
 
         }
-        colencours += 4;
+        col += 4;
         System.out.println("Le tableau indice de la forme\n" + Indice);
         System.out.println(Verif);
                 

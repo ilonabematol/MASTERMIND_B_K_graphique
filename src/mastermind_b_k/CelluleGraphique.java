@@ -34,5 +34,22 @@ public class CelluleGraphique extends JButton {
     public void paintComponent ( Graphics G){
         
         super.paintComponent(G);
-    }
-}
+        if (Pions.tabCouleur[0]== "R"){
+          setIcon(img_red);
+      }else if (Pions.tabCouleur[1] == "P"){
+          
+         setIcon(img_pink);
+      }else if(Pions.tabCouleur[2] == "G"){
+          setIcon(img_green);
+      }else if(Pions.tabCouleur[3] == "Y"){
+          setIcon(img_yellow);
+      }  else if(Pions.tabCouleur[4] == "0"){
+          setIcon(img_orange);
+      }else if(Pions.tabCouleur[5] == "B"){
+          setIcon(img_blue);
+      }
+          }
+      }
+        
+    
+

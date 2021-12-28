@@ -24,8 +24,7 @@ public class Grille_principale {
     ArrayList<String> Jeu_Joueur = new ArrayList<>();
     ArrayList<Boolean> Verif = new ArrayList<>();
     ArrayList<Integer> Indice = new ArrayList<>();
-    ArrayList<String> JJ = new ArrayList<>();
-    String[] tabCoul2 = new String[5];
+    String[] tabCoul2 = new String[6];
 
     // création du constructeur de tout le tableau
     //avec différentes cellules qu'on aura besoin de déterminer pour les différents indices des colonnes
@@ -36,11 +35,13 @@ public class Grille_principale {
         tabCouleur[3] = "Y";// jaune
         tabCouleur[4] = "O";// orange
         tabCouleur[5] = "B";// blue
-
+        
+         
+        
         for (int i = 0; i < 42; i++) {
 
             Verif.add(false);
-            Indice.add(null);
+            Indice.add(-1);
         }
 
     }
@@ -53,11 +54,11 @@ public class Grille_principale {
      */
     public String[] combinaisonaléatoire() {
         for (int i = 0; i < 4; i++) {
-            int couleur = pions.nextInt(5);
+            int couleur = pions.nextInt(6);
             tabOrdi[i] = tabCouleur[couleur];
         }
         System.out.println(Arrays.toString(tabOrdi));
-        System.out.println("rentre les mêmes couleur que le tableau ordi -->test");
+        
 
         return tabOrdi;
     }
@@ -79,7 +80,7 @@ public class Grille_principale {
      *
      * @param line@return
      */
-    public ArrayList<Integer> analyse_Jeu_Joueur(int line) {//String[] tabJoueur ,
+    public boolean analyse_Jeu_Joueur(int line) {//String[] tabJoueur ,
         // premiere boucle d'analyse concernant si bonne couleur + bon emplacement
         // a chaque passage de niveau(nouvel ligne) clear le tableau d'indice et même tout les autres ArrayList: --> l'affichage restera;
         // on n'a pas besoin de stocker les valeurs des ArrayList(sauf pour réafficher a chaque fois les niveaux du joueur
@@ -87,110 +88,60 @@ public class Grille_principale {
 
         int col = line * 4;
         int compteur = 0;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++ ) {
 
-            if (Jeu_Joueur.get(col) == null ? tabOrdi[i] == null : Jeu_Joueur.get(col).equals(tabOrdi[i])) {
-                if (Verif.get(col) != true) {
-                    // attention où on se situe dnas le tableau
-                    // on prend line*4
-                    // exemple : si line=0 --> 0*4=0 donc Jeu_Joueur.get(0)==tabOrdi[0]
-                    //           si line=1 --> 1*4=4 donc Jeu_Joueur.get(4)==tabOrdi[0]
-                    // jusqu'à la 12 ieme ligne
-                    Verif.set(col, true);
-                    Indice.set(col, 0);
+            if (Jeu_Joueur.get(col+i)==tabOrdi[i]){
+                if (Verif.get(col+i) != true) {
+                    Verif.set(col+i, true);
+                    Indice.set(col+i, 0);
                     compteur += 1;
-                    //pour savoir si 4 indices sont == a 4
+                    //compteur pour savoir si 4 indices sont == a 4
                 }
             }
-
-            col++;
+        //System.out.println("1"+Verif.subList(col,col+4));
+        //System.out.println(Indice.subList(col,col+4));
         }
         if (compteur == 4) {
             System.out.println("Vous avez Gagné!!!");
-            System.out.println("Le tableau indice de la forme/n" + Indice);
-            System.out.println(Verif);
-            return Indice;
+            //System.out.println("Le tableau indice de la forme/n" + Indice);
+            //System.out.println(Verif);
+            return true;
         }
         //deuxième boucle pour déterminer si on place des pions si seulement présence d'une bonne couleur
-        for (int j = 0; j < 4; j++) {
-            if (compteur == 0) {
-                JJ = (ArrayList<String>) Jeu_Joueur.subList(col, col + 4);
-                if (JJ.contains(tabOrdi[j])) {
-                    Verif.set(col, true);
-                    Indice.set(col, 1);
-                    col++;
-                }
-            }
-        }
-        tabCoul2 = tabCouleur; //on remet le tableau couleur a jour a chaque analyse
+        tabCoul2[0] = "R";// affection de la couleur rouge
+        tabCoul2[1] = "P";// rose/pink
+        tabCoul2[2] = "G";//green 
+        tabCoul2[3] = "Y";// jaune
+        tabCoul2[4] = "O";// orange
+        tabCoul2[5] = "B";// blue
+        
+        
         for (int k = col; k < col + 4; k++) {
             if (Verif.get(k) != true) {
                 for (int j = 0; j < 4; j++) {
                     if (Jeu_Joueur.get(k) == tabOrdi[j]) {  // si on fait ca cela analyse tout le tableau array --> donc pas possible
-                        //test: si col=line*4=4
-                        //Jeu_Joueur.get(4)==(tabOrdi[0])
-                        for (int i = 0; i < 6; i++) {
-                            if (tabCoul2[i] == tabOrdi[j]) {// && tabCoul2[i] != "NOP") {
-                                tabCoul2[i] = "NOP";
-                                Indice.set(col, 1);// sinon on rentre juste un 1// si identique boom on rajoute un 1 u tableau des indices                               
-                                Verif.set(k, true);
+                        
+                        if(Verif.get(col+j) != true) {
+                            for (int i = 0; i < 6; i++) {
+                                if (tabCoul2[i] == tabOrdi[j]) {// && tabCoul2[i] != "NOP") {
+                                    tabCoul2[i] = "NOP";
+                                    Indice.set(k, 1);// sinon on rentre juste un 1// si identique boom on rajoute un 1 u tableau des indices                               
+                                    Verif.set(k, true);
 
-                                break;
+                                    break;
+                                }
                             }
                         }
-
-                        Verif.set(k, true);
                     }
+                    Verif.set(k, true);
                 }
             }
         }
-        return Indice;
+        //System.out.println("2"+Verif.subList(col, col+4));
+        System.out.println(Indice.subList(col, col+4));
+        return false;
     }
 }
 
-                /*
-        // idée pour les boucles
-        int col = line * 4;// on enregistre la ligne finale dans une variable pour ensuite reparcourir a +4
-        for (int indtabOrdi = 0; indtabOrdi < 4; indtabOrdi++) { // on parcourt de 0 à +4 // double boucle imbriquée 1) qui parcourt chaque case de la liste alétoire de l'ordi 
-            //     for(int indjou=0 ; indjou < colencours+4 ; indjou++){
-            if (Jeu_Joueur.contains(tabOrdi[indtabOrdi])) {  ///2) on verifie si il y a une couleur similaire
-                int indjoueur = Jeu_Joueur.indexOf(tabOrdi[indtabOrdi]);// index of prend le premier indice ouu il y a l'element qu'on veut 
-                if (indtabOrdi == indjoueur) {// si couleur similaire on verif l'indice / on compare les indices (indice de la case en cours de l'ordi et indice en cours du joueur 
-                    Indice.add(0); // si indice le même on rentre un 0 dans l'array des indices 
-                    int tour = Jeu_Joueur.indexOf(false);
-                    Verif.set(tour, true);
-                    //Verif.add(true);// une fois la verif de la première case faite la valeur passe à true
-                } else {
-                    for (int i = 0; i < 6; i++) {
-                        if (tabCoul2[i] == tabOrdi[indtabOrdi] && tabCoul2[i] != "NOP") {
-                            tabCoul2[i] = "NOP";
-                            Indice.add(1);// sinon on rentre juste un 1// si identique boom on rajoute un 1 u tableau des indices
-                             int tours = Jeu_Joueur.indexOf(false);
-                            Verif.set(tours, true);
-            
-                            break;
-                        }
-
-                    }
-                    System.out.println(Arrays.toString(tabCoul2));
-                }
-            } else {
-
-                Verif.add(true);
-
-                continue;// si pas même couleur on passe à la case d'apres 
-                // et tableau d'indice reste null
-                //  }
-
-            }
-
-        }
-        col += 4;
-        System.out.println("Le tableau indice de la forme\n" + Indice);
-        System.out.println(Verif);
-                
-    return Indice;// on renvoit le tableau des indices 
-   // on peut rajouter une boucle qui verifie que toutes les cases de l'ordi on bien été comparée        
-                 */
-            
+      
             

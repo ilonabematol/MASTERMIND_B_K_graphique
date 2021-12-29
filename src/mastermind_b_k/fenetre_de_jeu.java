@@ -18,23 +18,18 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         rappel.setVisible(false);
         pannel_couleurs.setVisible(false);
         panneau_affichage.setVisible(false);
-        CelluleGraphique grilleColors[][]= new CelluleGraphique [12][4];
-        
-        /*
-        for (int ligne = 12 ; ligne > 0 ; ligne --){
-            for (int colonne =0 ; colonne<4 ; colonne++){
-               String coul = "vide";
-               CelluleGraphique cellGraph = new CelluleGraphique(coul);
-               
+        //CelluleGraphique grilleColors[][]= new CelluleGraphique [12][4];
+        Grille_principale grilleColors[][]= new Grille_principale [12][4];
+  
+        for (int ligne=0 ; ligne <12 ; ligne ++){
+            for (int colonne=0 ; colonne<4 ; colonne++){
+               //Grille_principale coul=null;
+               CelluleGraphique cellGraph = new CelluleGraphique(grilleColors[ligne][colonne]);
                panneau_affichage.add(cellGraph);
                
             }
         }
-        */
-        
-        
-        
-
+   
     }
 /*public
     }
@@ -93,7 +88,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         grilleJeu.setBackground(new java.awt.Color(204, 204, 204));
         grilleJeu.setBorder(new javax.swing.border.MatteBorder(null));
         grilleJeu.setLayout(new java.awt.GridLayout(12, 4));
-        getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 400, 610));
+        getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 400, 600));
 
         panneau_jeu.setBackground(new java.awt.Color(255, 204, 204));
 
@@ -180,7 +175,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         grilleAnalyse.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         grilleAnalyse.setToolTipText("");
         grilleAnalyse.setLayout(new java.awt.GridLayout(1, 2));
-        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 150, 610));
+        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 150, 600));
 
         panneau_affichage.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -293,29 +288,29 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_couleursLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(66, 66, 66))
+                .addGap(68, 68, 68))
         );
         pannel_couleursLayout.setVerticalGroup(
             pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pannel_couleursLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addGap(35, 35, 35)
+                .addGap(27, 27, 27)
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(col_red)
                     .addComponent(col_yellow))
-                .addGap(35, 35, 35)
+                .addGap(36, 36, 36)
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(col_green)
                     .addComponent(col_blue))
-                .addGap(40, 40, 40)
+                .addGap(38, 38, 38)
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(col_pink)
                     .addComponent(col_orange))
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        getContentPane().add(pannel_couleurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 300, 300, 260));
+        getContentPane().add(pannel_couleurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 300, 240));
 
         jLabel4.setFont(new java.awt.Font("American Typewriter", 1, 24)); // NOI18N
         jLabel4.setText("MASTERMIND");
@@ -328,7 +323,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         jTextArea2.setRows(5);
         rappel.setViewportView(jTextArea2);
 
-        getContentPane().add(rappel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 570, 300, -1));
+        getContentPane().add(rappel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 560, 300, -1));
 
         setBounds(0, 0, 1032, 695);
     }// </editor-fold>//GEN-END:initComponents
@@ -352,7 +347,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     private void col4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col4ActionPerformed
         // TODO add your handling code here:
         placerDansColonne(4);
-        
+        /*
         if(finish==true){
             btn_col_1.setEnabled(false);
         }
@@ -360,6 +355,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
             btn_col_1.setEnabled(false);
         }
         JoueurSuivant();
+        */
                  
     }//GEN-LAST:event_col4ActionPerformed
 

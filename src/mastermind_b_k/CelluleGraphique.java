@@ -14,7 +14,7 @@ import javax.swing.JButton;
  */
 public class CelluleGraphique extends JButton {
     Grille_principale Pions;
-    
+    /*
     ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.png"));
     ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.png"));
     ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.png"));
@@ -22,18 +22,24 @@ public class CelluleGraphique extends JButton {
     ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.png"));
     ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.png"));
     
+    */
+    ImageIcon img_vide=new javax.swing.ImageIcon(getClass().getResource("/images/vide.png"));
     
     public CelluleGraphique(Grille_principale uneCellule){
         Pions=uneCellule;
         //CelluleGraphique celluleAssociee = new CelluleGraphique();*/
         
-    
-}
+    }
+
     
     @Override
     public void paintComponent ( Graphics G){
         
         super.paintComponent(G);
+        setIcon(img_vide);
+}
+}
+/*
         if (Pions.tabCouleur[0]== "R"){
           setIcon(img_red);
       }else if (Pions.tabCouleur[1] == "P"){
@@ -50,6 +56,6 @@ public class CelluleGraphique extends JButton {
       }
           }
       }
-        
+       */ 
     
 

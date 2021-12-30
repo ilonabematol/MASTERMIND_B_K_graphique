@@ -23,7 +23,7 @@ public class CelluleGraphique extends JButton {
     ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.png"));
     
     */
-    ImageIcon img_vide=new javax.swing.ImageIcon(getClass().getResource("/images/vide.png"));
+    ImageIcon img_vide=new javax.swing.ImageIcon(getClass().getResource("/images/vide.jpg"));
     
     public CelluleGraphique(Grille_principale uneCellule){
         Pions=uneCellule;

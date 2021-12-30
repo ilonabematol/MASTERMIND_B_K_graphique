@@ -102,7 +102,7 @@ public class Grille_principale {
         //System.out.println(Indice.subList(col,col+4));
         }
         if (compteur == 4) {
-            System.out.println("Vous avez Gagné!!!");
+            //System.out.println("Vous avez Gagné!!!");
             //System.out.println("Le tableau indice de la forme/n" + Indice);
             //System.out.println(Verif);
             return true;

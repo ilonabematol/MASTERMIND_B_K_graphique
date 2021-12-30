@@ -4,6 +4,9 @@
  */
 package mastermind_b_k;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author ilonabematol
@@ -13,8 +16,17 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     /**
      * Creates new form fenetre_de_jeu
      */
+    Grille_principale obj1=new Grille_principale();
+    ArrayList<Integer> Indice = new ArrayList<>(); 
+    ArrayList<String> Jeu_Joueur=new ArrayList<String>();
+    int compteurcoul;
+    int ligne;
+    int colonne;
+    
     public fenetre_de_jeu() {
         initComponents();
+        compteurcoul=0;
+        ligne=-1;
         rappel.setVisible(false);
         pannel_couleurs.setVisible(false);
         panneau_affichage.setVisible(false);
@@ -29,6 +41,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                
             }
         }
+        
    
     }
 /*public
@@ -337,7 +350,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         rappel.setVisible(true);
         pannel_couleurs.setVisible(true);
         panneau_affichage.setVisible(true);
-        rappel.setToolTipText("Séléctionnez une colonne");
+        initialiserPartie();
+        rappel.setToolTipText("Le jeu commence: Séléctionnez une colonne");
         ///initialiserPartie();
         
         panneau_affichage.repaint();// on rafraichis la grille afin que les images s'affiche dès le debut 
@@ -347,6 +361,9 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     private void col4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col4ActionPerformed
         // TODO add your handling code here:
         placerDansColonne(4);
+        desactiveButton();
+        rappel.setToolTipText("Séléctionnez une couleur");
+        
         /*
         if(finish==true){
             btn_col_1.setEnabled(false);
@@ -360,47 +377,60 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     }//GEN-LAST:event_col4ActionPerformed
 
     private void col1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col1ActionPerformed
-        // TODO add your handling code here:
+        placerDansColonne(1);
+        desactiveButton();
+        rappel.setToolTipText("Séléctionnez une couleur");
     }//GEN-LAST:event_col1ActionPerformed
 
     private void col2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col2ActionPerformed
-        // TODO add your handling code here:
+        placerDansColonne(2);
+        desactiveButton();
+        rappel.setToolTipText("Séléctionnez une couleur");
     }//GEN-LAST:event_col2ActionPerformed
 
     private void col3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col3ActionPerformed
-        // TODO add your handling code here:
+        placerDansColonne(3);
+        desactiveButton();
+        rappel.setToolTipText("Séléctionnez une couleur");
     }//GEN-LAST:event_col3ActionPerformed
 
     private void col_yellowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_yellowActionPerformed
-        // TODO add your handling code here:
+        choixcoul(3);
     }//GEN-LAST:event_col_yellowActionPerformed
 
     private void col_redActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_redActionPerformed
-        // TODO add your handling code here:
+        choixcoul(0);
     }//GEN-LAST:event_col_redActionPerformed
 
     private void col_greenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_greenActionPerformed
-        // TODO add your handling code here:
+        choixcoul(2);
     }//GEN-LAST:event_col_greenActionPerformed
 
     private void col_pinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_pinkActionPerformed
-        // TODO add your handling code here:
+        choixcoul(1);
     }//GEN-LAST:event_col_pinkActionPerformed
 
     private void col_blueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_blueActionPerformed
-        // TODO add your handling code here:
+        choixcoul(5);
     }//GEN-LAST:event_col_blueActionPerformed
 
     private void col_orangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_orangeActionPerformed
-        // TODO add your handling code here:
+        choixcoul(4);
     }//GEN-LAST:event_col_orangeActionPerformed
     
-    public void placerDansColonne(int col){
-        activeButton();
-        rappel.setToolTipText("Séléctionnez une couleur");
-        
-        
+    public int placerDansColonne(int col){
+        colonne=col-1;
+        return colonne;
     }
+   
+        
+       
+    
+    public int ligneEncours(){
+        ligne+=1;
+        return ligne;
+    }
+    
     
     public void activeButton(){
         col1.setEnabled(true);
@@ -409,6 +439,43 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         col4.setEnabled(true);
         
     }
+    public void desactiveButton(){
+        col1.setEnabled(false);
+        col2.setEnabled(false);
+        col3.setEnabled(false);
+        col4.setEnabled(false);
+        
+    }
+    public void choixcoul(int indcoul){
+       
+        compteurcoul+=1;
+        Jeu_Joueur.add(obj1.creation_Jeu_Joueur(indcoul));
+        grilleJeu.repaint();
+        if (compteurcoul==4){
+            compteurcoul=0;
+            activeButton();
+            if (obj1.analyse_Jeu_Joueur(ligne)==true){
+                grilleJeu.setVisible(false);
+                grilleAnalyse.setVisible(false);
+                rappel.setToolTipText("Vous avez perdu!!!");   
+                }
+            if (Jeu_Joueur.size()==42 && obj1.analyse_Jeu_Joueur(ligne)==true){
+                
+                grilleJeu.setVisible(false);
+                grilleAnalyse.setVisible(false);
+                rappel.setToolTipText("Vous avez perdu!!!");
+                
+               
+            }
+    
+        }
+        
+
+    }
+    public void initialiserPartie(){
+        obj1.combinaisonaléatoire();
+    }
+   
     /**
      * @param args the command line arguments
      */

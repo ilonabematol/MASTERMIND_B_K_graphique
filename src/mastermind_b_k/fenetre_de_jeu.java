@@ -22,6 +22,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     int compteurcoul;
     int ligne;
     int colonne;
+    //Grille_principale grille= new Grille_principale() ;
+    
     
     public fenetre_de_jeu() {
         initComponents();
@@ -30,19 +32,23 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         rappel.setVisible(false);
         pannel_couleurs.setVisible(false);
         panneau_affichage.setVisible(false);
+        desactiveButton_col();
+        desactiveButton_coul();
         //CelluleGraphique grilleColors[][]= new CelluleGraphique [12][4];
-        Grille_principale grilleColors[][]= new Grille_principale [12][4];
-  
-        for (int ligne=0 ; ligne <12 ; ligne ++){
-            for (int colonne=0 ; colonne<4 ; colonne++){
+        
+        
+        /*
+        for (int line=0 ; line <12 ; line ++){
+            for (int column=0 ; column<4 ; column++){
                //Grille_principale coul=null;
-               CelluleGraphique cellGraph = new CelluleGraphique(grilleColors[ligne][colonne]);
-               panneau_affichage.add(cellGraph);
+               //
+               grilleJeu.add(cellGraph);
+               grilleJeu.repaint();
                
             }
         }
         
-   
+   */
     }
 /*public
     }
@@ -59,8 +65,6 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         grilleJeu = new javax.swing.JPanel();
         panneau_jeu = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         btn_start = new javax.swing.JButton();
         col4 = new javax.swing.JButton();
         col1 = new javax.swing.JButton();
@@ -69,7 +73,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         grilleAnalyse = new javax.swing.JPanel();
         panneau_affichage = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        annonce = new javax.swing.JTextArea();
         pannel_couleurs = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         col_red = new javax.swing.JButton();
@@ -105,15 +110,6 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
 
         panneau_jeu.setBackground(new java.awt.Color(255, 204, 204));
 
-        jLabel1.setText("Entrez votre nom d'utilisateur: ");
-
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
         btn_start.setText("Démarrer");
         btn_start.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -126,31 +122,16 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         panneau_jeuLayout.setHorizontalGroup(
             panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_jeuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(panneau_jeuLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(btn_start, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addGap(70, 70, 70)
+                .addComponent(btn_start, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         panneau_jeuLayout.setVerticalGroup(
             panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panneau_jeuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_start, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(panneau_jeuLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 18, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(btn_start, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(panneau_jeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 300, 80));
+        getContentPane().add(panneau_jeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 300, 50));
 
         col4.setText("4");
         col4.addActionListener(new java.awt.event.ActionListener() {
@@ -195,21 +176,24 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         jLabel3.setText("GAME");
 
-        jTextField2.setText("jTextField2");
+        annonce.setColumns(20);
+        annonce.setFont(new java.awt.Font("Vampire Wars", 2, 12)); // NOI18N
+        annonce.setForeground(new java.awt.Color(51, 51, 0));
+        annonce.setLineWrap(true);
+        annonce.setRows(2);
+        jScrollPane1.setViewportView(annonce);
 
         javax.swing.GroupLayout panneau_affichageLayout = new javax.swing.GroupLayout(panneau_affichage);
         panneau_affichage.setLayout(panneau_affichageLayout);
         panneau_affichageLayout.setHorizontalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_affichageLayout.createSequentialGroup()
-                .addGroup(panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panneau_affichageLayout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jLabel3))
-                    .addGroup(panneau_affichageLayout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addGap(114, 114, 114)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_affichageLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panneau_affichageLayout.setVerticalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,11 +201,11 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        getContentPane().add(panneau_affichage, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 170, 300, 110));
+        getContentPane().add(panneau_affichage, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 300, 120));
 
         pannel_couleurs.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -292,14 +276,14 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                     .addComponent(col_red, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                     .addComponent(col_pink, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(col_green, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(col_yellow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(col_orange, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
                     .addComponent(col_blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(41, 41, 41))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_couleursLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(72, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(68, 68, 68))
         );
@@ -323,7 +307,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                 .addContainerGap(30, Short.MAX_VALUE))
         );
 
-        getContentPane().add(pannel_couleurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 310, 300, 240));
+        getContentPane().add(pannel_couleurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 300, 240));
 
         jLabel4.setFont(new java.awt.Font("American Typewriter", 1, 24)); // NOI18N
         jLabel4.setText("MASTERMIND");
@@ -333,17 +317,15 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Yu Gothic", 0, 11)); // NOI18N
         jTextArea2.setRows(5);
+        jTextArea2.setText("CASE NOIRE : \n \tvous avez une bonne couleur \nCASE BLANCHE : \n         vous une bonne couleur au bon emplacement\n");
         rappel.setViewportView(jTextArea2);
 
-        getContentPane().add(rappel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 560, 300, -1));
+        getContentPane().add(rappel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 300, 110));
 
         setBounds(0, 0, 1032, 695);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
         // TODO add your handling code here:
@@ -351,18 +333,23 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         pannel_couleurs.setVisible(true);
         panneau_affichage.setVisible(true);
         initialiserPartie();
-        rappel.setToolTipText("Le jeu commence: Séléctionnez une colonne");
-        ///initialiserPartie();
+        annonce.setText("Le jeu commence: Séléctionnez une colonne");
+        activeButton_col();
+        for (int k=0;k<48;k++){
+            Jeu_Joueur.add(null);
+            
+        }
+        affichageGraph();
         
-        panneau_affichage.repaint();// on rafraichis la grille afin que les images s'affiche dès le debut 
+        grilleJeu.repaint();
         btn_start.setEnabled(false);//pour ne pas que l'on recommence toujours une partie - désactive le bouton
     }//GEN-LAST:event_btn_startActionPerformed
 
     private void col4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col4ActionPerformed
         // TODO add your handling code here:
         placerDansColonne(4);
-        desactiveButton();
-        rappel.setToolTipText("Séléctionnez une couleur");
+        desactiveButton_col();
+        annonce.setText("Séléctionnez une couleur");
         
         /*
         if(finish==true){
@@ -378,20 +365,20 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
 
     private void col1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col1ActionPerformed
         placerDansColonne(1);
-        desactiveButton();
-        rappel.setToolTipText("Séléctionnez une couleur");
+        desactiveButton_col();
+        annonce.setText("Séléctionnez une couleur");
     }//GEN-LAST:event_col1ActionPerformed
 
     private void col2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col2ActionPerformed
         placerDansColonne(2);
-        desactiveButton();
-        rappel.setToolTipText("Séléctionnez une couleur");
+        desactiveButton_col();
+        annonce.setText("Séléctionnez une couleur");
     }//GEN-LAST:event_col2ActionPerformed
 
     private void col3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col3ActionPerformed
         placerDansColonne(3);
-        desactiveButton();
-        rappel.setToolTipText("Séléctionnez une couleur");
+        desactiveButton_col();
+        annonce.setText("Séléctionnez une couleur");
     }//GEN-LAST:event_col3ActionPerformed
 
     private void col_yellowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_yellowActionPerformed
@@ -420,7 +407,9 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     
     public int placerDansColonne(int col){
         colonne=col-1;
-        return colonne;
+        int indplacement=ligneEncours()*4+colonne;
+        activeButton_coul();
+        return indplacement;
     }
    
         
@@ -431,49 +420,81 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         return ligne;
     }
     
+    public void affichageGraph(){
+        for (int i=0;i<48;i++){
+            CelluleGraphique cellGraph = new CelluleGraphique(Jeu_Joueur.get(i));
+            grilleJeu.add(cellGraph);
+            grilleJeu.repaint();
+        }
+    }
     
-    public void activeButton(){
+    public void activeButton_col(){
         col1.setEnabled(true);
         col2.setEnabled(true);
         col3.setEnabled(true);
         col4.setEnabled(true);
         
     }
-    public void desactiveButton(){
+    public void desactiveButton_col(){
         col1.setEnabled(false);
         col2.setEnabled(false);
         col3.setEnabled(false);
         col4.setEnabled(false);
         
     }
+    public void activeButton_coul(){
+        col_red.setEnabled(true);
+        col_yellow.setEnabled(true);
+        col_pink.setEnabled(true);
+        col_blue.setEnabled(true);
+        col_orange.setEnabled(true);
+        col_green.setEnabled(true);
+        
+    }
+    public void desactiveButton_coul(){
+        col_red.setEnabled(false);
+        col_yellow.setEnabled(false);
+        col_pink.setEnabled(false);
+        col_blue.setEnabled(false);
+        col_orange.setEnabled(false);
+        col_green.setEnabled(false);
+        
+        
+    }
     public void choixcoul(int indcoul){
-       
+        desactiveButton_coul();
         compteurcoul+=1;
-        Jeu_Joueur.add(obj1.creation_Jeu_Joueur(indcoul));
+        Jeu_Joueur.set(4,"R");//obj1.creation_Jeu_Joueur(indcoul,4));
+        affichageGraph();
         grilleJeu.repaint();
         if (compteurcoul==4){
             compteurcoul=0;
-            activeButton();
-            if (obj1.analyse_Jeu_Joueur(ligne)==true){
+            
+            if (obj1.analyse_Jeu_Joueur(ligneEncours())==true){
                 grilleJeu.setVisible(false);
                 grilleAnalyse.setVisible(false);
-                rappel.setToolTipText("Vous avez perdu!!!");   
+                annonce.setText("Vous avez gagné!!!");   
                 }
-            if (Jeu_Joueur.size()==42 && obj1.analyse_Jeu_Joueur(ligne)==true){
+            if (Jeu_Joueur.size()==4 ){
                 
                 grilleJeu.setVisible(false);
                 grilleAnalyse.setVisible(false);
-                rappel.setToolTipText("Vous avez perdu!!!");
-                
+                annonce.setText("Vous avez perdu!!!");    
                
             }
+            
     
         }
+        annonce.setText("Séléctionnez une colonne");
+        activeButton_col();
+        affichageGraph();
+        grilleJeu.repaint();
         
 
     }
     public void initialiserPartie(){
         obj1.combinaisonaléatoire();
+        
     }
    
     /**
@@ -512,6 +533,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextArea annonce;
     private javax.swing.JButton btn_start;
     private javax.swing.JButton col1;
     private javax.swing.JButton col2;
@@ -525,15 +547,13 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     private javax.swing.JButton col_yellow;
     private javax.swing.JPanel grilleAnalyse;
     private javax.swing.JPanel grilleJeu;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JPanel panneau_affichage;
     private javax.swing.JPanel panneau_jeu;
     private javax.swing.JPanel pannel_couleurs;

@@ -13,20 +13,21 @@ import javax.swing.JButton;
  * @author ilonabematol
  */
 public class CelluleGraphique extends JButton {
-    Grille_principale Pions;
-    /*
-    ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.png"));
-    ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.png"));
-    ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.png"));
-    ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.png"));
-    ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.png"));
-    ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.png"));
+    String Pions;
     
-    */
+    ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.jpeg"));
+    ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.jpeg"));
+    ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.jpeg"));
+    ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.jpeg"));
+    ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.jpeg"));
+    ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.jpeg"));
     ImageIcon img_vide=new javax.swing.ImageIcon(getClass().getResource("/images/vide.jpg"));
+    ImageIcon img_white=new javax.swing.ImageIcon(getClass().getResource("/images/White.jpg"));
+    ImageIcon img_black=new javax.swing.ImageIcon(getClass().getResource("/images/Black.png"));
     
-    public CelluleGraphique(Grille_principale uneCellule){
+    public CelluleGraphique(String uneCellule){
         Pions=uneCellule;
+        
         //CelluleGraphique celluleAssociee = new CelluleGraphique();*/
         
     }
@@ -36,26 +37,32 @@ public class CelluleGraphique extends JButton {
     public void paintComponent ( Graphics G){
         
         super.paintComponent(G);
-        setIcon(img_vide);
-}
-}
-/*
-        if (Pions.tabCouleur[0]== "R"){
+       // if(Pions==null){
+         //    setIcon(img_vide);      
+        //}
+        if (Pions== "R"){
           setIcon(img_red);
-      }else if (Pions.tabCouleur[1] == "P"){
+      }else if (Pions == "P"){
           
          setIcon(img_pink);
-      }else if(Pions.tabCouleur[2] == "G"){
+      }else if(Pions == "G"){
+          
           setIcon(img_green);
-      }else if(Pions.tabCouleur[3] == "Y"){
+      }else if(Pions == "Y"){
+          
           setIcon(img_yellow);
-      }  else if(Pions.tabCouleur[4] == "0"){
+      }  else if(Pions == "O"){
+          
           setIcon(img_orange);
-      }else if(Pions.tabCouleur[5] == "B"){
+          
+      }else if(Pions== "B"){
           setIcon(img_blue);
       }
-          }
-      }
-       */ 
-    
+          
+      
+        
+        
+    }
 
+
+}

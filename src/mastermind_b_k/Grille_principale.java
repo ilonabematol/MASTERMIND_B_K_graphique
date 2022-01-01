@@ -25,6 +25,8 @@ public class Grille_principale {
     ArrayList<Boolean> Verif = new ArrayList<>();
     ArrayList<Integer> Indice = new ArrayList<>();
     String[] tabCoul2 = new String[6];
+    String Case;
+    //Cellule grilleColors[][]= new Cellule [12][4];
 
     // création du constructeur de tout le tableau
     //avec différentes cellules qu'on aura besoin de déterminer pour les différents indices des colonnes
@@ -35,11 +37,21 @@ public class Grille_principale {
         tabCouleur[3] = "Y";// jaune
         tabCouleur[4] = "O";// orange
         tabCouleur[5] = "B";// blue
-        
+         //on crée un tableau taille 12X4 ,
+         /*
+        for (int ligne=0 ; ligne <12 ; ligne ++){
+            for (int colonne=0 ; colonne<4 ; colonne++){
+               int i=0;
+               grilleColors[ligne][colonne]=null;
+               grilleColors[ligne][colonne]=Jeu_Joueur.get(i);
+               i++;
+            }
+        }
          
+        */
         
-        for (int i = 0; i < 42; i++) {
-
+        for (int i = 0; i < 48; i++) {
+            Jeu_Joueur.add(null);
             Verif.add(false);
             Indice.add(-1);
         }
@@ -63,19 +75,47 @@ public class Grille_principale {
         return tabOrdi;
     }
 
-    public String creation_Jeu_Joueur(int nbrecolor) {
+    public String creation_Jeu_Joueur(int nbrecolor , int indPion) {
 
-        Jeu_Joueur.add(tabCouleur[nbrecolor]);
+        Jeu_Joueur.set(indPion,tabCouleur[nbrecolor]);
         return tabCouleur[nbrecolor];
 
     }
-
-    public void affichage_Jeu_Joueur(String tabJoueur) {
-        //for (int k=0;)
-        System.out.println("||");
-
+    /*
+    public String analyse_coul(){
+       
+        if (grilleColors[ligne][colonne]=="R") {
+            return "R";
+        }
+        if (Jeu_Joueur.get(i)=="Y") {
+            return "Y";
+        }
+        if (Jeu_Joueur.get(i)=="G") {
+            return "G";
+        }
+        if (Jeu_Joueur.get(i)=="B") {
+             return "B";
+         }
+        if (Jeu_Joueur.get(i)=="P") {
+            return "P";
+        }
+        if (Jeu_Joueur.get(i)=="O") {
+            return "O";
+        }
+           
+        
+        return null;
+        
     }
-
+    public String analyse_ind(){
+        if (Indice.get(i)=="W") {
+                return "W";
+            }
+            if (Indice.get(i)=="B") {
+                return "B";
+            }
+    }
+*/
     /**
      *
      * @param line@return

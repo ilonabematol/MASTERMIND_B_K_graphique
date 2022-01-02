@@ -37,18 +37,7 @@ public class Grille_principale {
         tabCouleur[3] = "Y";// jaune
         tabCouleur[4] = "O";// orange
         tabCouleur[5] = "B";// blue
-         //on crée un tableau taille 12X4 ,
-         /*
-        for (int ligne=0 ; ligne <12 ; ligne ++){
-            for (int colonne=0 ; colonne<4 ; colonne++){
-               int i=0;
-               grilleColors[ligne][colonne]=null;
-               grilleColors[ligne][colonne]=Jeu_Joueur.get(i);
-               i++;
-            }
-        }
-         
-        */
+        
         
         for (int i = 0; i < 48; i++) {
             Jeu_Joueur.add(null);
@@ -134,6 +123,7 @@ public class Grille_principale {
                 if (Verif.get(col+i) != true) {
                     Verif.set(col+i, true);
                     Indice.set(col+i, 0);
+                    
                     compteur += 1;
                     //compteur pour savoir si 4 indices sont == a 4
                 }

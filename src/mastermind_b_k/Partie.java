@@ -39,7 +39,7 @@ public class Partie {
                         choixcolor = sc.nextInt()-1;
                     }
 
-                    Jeu_Joueur.add(obj1.creation_Jeu_Joueur(choixcolor));
+                    //Jeu_Joueur.add(obj1.creation_Jeu_Joueur(choixcolor));
                 }
 
                 System.out.println("ligne en cours " + ligne);

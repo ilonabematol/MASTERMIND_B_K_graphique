@@ -75,9 +75,9 @@ public class Grille_principale {
         return tabOrdi;
     }
 
-    public String creation_Jeu_Joueur(int nbrecolor , int indPion) {
+    public String creation_Jeu_Joueur(int nbrecolor ){//, int indPion) {
 
-        Jeu_Joueur.set(indPion,tabCouleur[nbrecolor]);
+        Jeu_Joueur.add(tabCouleur[nbrecolor]);
         return tabCouleur[nbrecolor];
 
     }

@@ -5,6 +5,7 @@
 package mastermind_b_k;
 
 import java.awt.Graphics;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
@@ -14,6 +15,7 @@ import javax.swing.JButton;
  */
 public class CelluleGraphique extends JButton {
     String Pions;
+    ArrayList<String> Jeu_Joueur = new ArrayList<String>();
     
     ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.jpeg"));
     ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.jpeg"));
@@ -31,7 +33,8 @@ public class CelluleGraphique extends JButton {
         //CelluleGraphique celluleAssociee = new CelluleGraphique();*/
         
     }
-
+     
+    
     
     @Override
     public void paintComponent ( Graphics G){

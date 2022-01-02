@@ -5,6 +5,7 @@
 package mastermind_b_k;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -16,28 +17,56 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     /**
      * Creates new form fenetre_de_jeu
      */
-    Grille_principale obj1=new Grille_principale();
-    ArrayList<Integer> Indice = new ArrayList<>(); 
-    ArrayList<String> Jeu_Joueur=new ArrayList<String>();
+    Grille_principale obj1 = new Grille_principale();
+    ArrayList<Integer> Indice = new ArrayList<>();
+    ArrayList<String> Jeu_Joueur = new ArrayList<String>();
     int compteurcoul;
     int ligne;
     int colonne;
+    int ind;
     //Grille_principale grille= new Grille_principale() ;
-    
-    
+
     public fenetre_de_jeu() {
         initComponents();
-        compteurcoul=0;
-        ligne=-1;
+        compteurcoul = 0;
+        ind=-1;
+        ligne = -1;
         rappel.setVisible(false);
         pannel_couleurs.setVisible(false);
         panneau_affichage.setVisible(false);
         desactiveButton_col();
-        desactiveButton_coul();
+        //desactiveButton_coul();
         //CelluleGraphique grilleColors[][]= new CelluleGraphique [12][4];
+
+        for (int i = 0; i < 48; i++) {
+            Jeu_Joueur.add(null);
+        }
+            
+            //Partie Si on veut cliquer sur un bouton pour placer notre pion;
+            /*
+            cellGraph.addActionListener(new java.awt.event.ActionListener() {
+
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+
+                    String c = cellGraph.Pions;
+                    if (c == null) {
+                        Jeu_Joueur.set(avanc(),"Attente de couleur");
+                        annonce.setText("Séléctionnez une couleur");
+                        //Jeu_Joueur.set(i,"Attente de couleur");
+                        System.out.println(Jeu_Joueur);
+                        activeButton_coul();
+            
+                    }
+                }
+
+            });
+            */
         
-        
-        /*
+    }
+    
+    
+    
+    /*
         for (int line=0 ; line <12 ; line ++){
             for (int column=0 ; column<4 ; column++){
                //Grille_principale coul=null;
@@ -47,10 +76,10 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                
             }
         }
-        
-   */
-    }
-/*public
+                            
+     */
+
+ /*public
     }
 
     /**
@@ -335,12 +364,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         initialiserPartie();
         annonce.setText("Le jeu commence: Séléctionnez une colonne");
         activeButton_col();
-        for (int k=0;k<48;k++){
-            Jeu_Joueur.add(null);
-            
-        }
-        affichageGraph();
-        
+
         grilleJeu.repaint();
         btn_start.setEnabled(false);//pour ne pas que l'on recommence toujours une partie - désactive le bouton
     }//GEN-LAST:event_btn_startActionPerformed
@@ -350,7 +374,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         placerDansColonne(4);
         desactiveButton_col();
         annonce.setText("Séléctionnez une couleur");
-        
+
         /*
         if(finish==true){
             btn_col_1.setEnabled(false);
@@ -359,8 +383,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
             btn_col_1.setEnabled(false);
         }
         JoueurSuivant();
-        */
-                 
+         */
+
     }//GEN-LAST:event_col4ActionPerformed
 
     private void col1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col1ActionPerformed
@@ -404,99 +428,104 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     private void col_orangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_orangeActionPerformed
         choixcoul(4);
     }//GEN-LAST:event_col_orangeActionPerformed
-    
-    public int placerDansColonne(int col){
-        colonne=col-1;
-        int indplacement=ligneEncours()*4+colonne;
-        activeButton_coul();
+
+    public int placerDansColonne(int col) {
+        colonne = col - 1;
+        int indplacement = ligneEncours() * 4 + colonne;
+        //activeButton_coul();
         return indplacement;
     }
-   
-        
-       
-    
-    public int ligneEncours(){
-        ligne+=1;
+
+    public int ligneEncours() {
+        ligne += 1;
         return ligne;
     }
-    
-    public void affichageGraph(){
-        for (int i=0;i<48;i++){
-            CelluleGraphique cellGraph = new CelluleGraphique(Jeu_Joueur.get(i));
-            grilleJeu.add(cellGraph);
-            grilleJeu.repaint();
-        }
-    }
-    
-    public void activeButton_col(){
+
+    public void activeButton_col() {
         col1.setEnabled(true);
         col2.setEnabled(true);
         col3.setEnabled(true);
         col4.setEnabled(true);
         
     }
-    public void desactiveButton_col(){
+
+    public void desactiveButton_col() {
         col1.setEnabled(false);
         col2.setEnabled(false);
         col3.setEnabled(false);
         col4.setEnabled(false);
-        
+
     }
-    public void activeButton_coul(){
+
+    public void activeButton_coul() {
         col_red.setEnabled(true);
         col_yellow.setEnabled(true);
         col_pink.setEnabled(true);
         col_blue.setEnabled(true);
         col_orange.setEnabled(true);
         col_green.setEnabled(true);
-        
+
     }
-    public void desactiveButton_coul(){
+
+    public void desactiveButton_coul() {
         col_red.setEnabled(false);
         col_yellow.setEnabled(false);
         col_pink.setEnabled(false);
         col_blue.setEnabled(false);
         col_orange.setEnabled(false);
         col_green.setEnabled(false);
-        
-        
+
     }
-    public void choixcoul(int indcoul){
-        desactiveButton_coul();
-        compteurcoul+=1;
-        Jeu_Joueur.set(4,"R");//obj1.creation_Jeu_Joueur(indcoul,4));
-        affichageGraph();
-        grilleJeu.repaint();
-        if (compteurcoul==4){
-            compteurcoul=0;
-            
-            if (obj1.analyse_Jeu_Joueur(ligneEncours())==true){
-                grilleJeu.setVisible(false);
-                grilleAnalyse.setVisible(false);
-                annonce.setText("Vous avez gagné!!!");   
-                }
-            if (Jeu_Joueur.size()==4 ){
-                
-                grilleJeu.setVisible(false);
-                grilleAnalyse.setVisible(false);
-                annonce.setText("Vous avez perdu!!!");    
-               
-            }
-            
     
+    public void affichageGraph(){
+        for (int i = 0; i < 48; i++) {
+            Jeu_Joueur.set(i,null);
+            CelluleGraphique cellGraph = new CelluleGraphique(Jeu_Joueur.get(i));
+            grilleJeu.add(cellGraph);
+            grilleJeu.repaint();
+        }
+    }
+    
+    public int avanc(){
+        ind+=1;
+        return ind;
+    }
+    
+    public void choixcoul(int indcoul) {
+        //desactiveButton_coul();
+        compteurcoul += 1;
+        //int ind=Jeu_Joueur.indexOf("Attente de couleur");
+        Jeu_Joueur.set(avanc(),obj1.creation_Jeu_Joueur(indcoul));
+        affichageGraph();
+        if (compteurcoul == 4) {
+            compteurcoul = 0;
+
+            if (obj1.analyse_Jeu_Joueur(ligneEncours()) == true) {
+                grilleJeu.setVisible(false);
+                grilleAnalyse.setVisible(false);
+                annonce.setText("Vous avez gagné!!!");
+            }
+            if (Jeu_Joueur.size() == 4) {
+
+                grilleJeu.setVisible(false);
+                grilleAnalyse.setVisible(false);
+                annonce.setText("Vous avez perdu!!!");
+
+            }
+
         }
         annonce.setText("Séléctionnez une colonne");
         activeButton_col();
-        affichageGraph();
-        grilleJeu.repaint();
         
+        grilleJeu.repaint();
 
     }
-    public void initialiserPartie(){
+
+    public void initialiserPartie() {
         obj1.combinaisonaléatoire();
-        
+
     }
-   
+
     /**
      * @param args the command line arguments
      */

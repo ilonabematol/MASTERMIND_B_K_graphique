@@ -125,50 +125,50 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
         jPanel1 = new javax.swing.JPanel();
         grilleJeu = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
+        jButton_44 = new javax.swing.JButton();
+        jButton_45 = new javax.swing.JButton();
+        jButton_46 = new javax.swing.JButton();
+        jButton_47 = new javax.swing.JButton();
+        jButton_40 = new javax.swing.JButton();
+        jButton_41 = new javax.swing.JButton();
+        jButton_42 = new javax.swing.JButton();
+        jButton_43 = new javax.swing.JButton();
+        jButton_36 = new javax.swing.JButton();
+        jButton_37 = new javax.swing.JButton();
+        jButton_38 = new javax.swing.JButton();
+        jButton_39 = new javax.swing.JButton();
+        jButton_32 = new javax.swing.JButton();
+        jButton_33 = new javax.swing.JButton();
+        jButton_34 = new javax.swing.JButton();
+        jButton_35 = new javax.swing.JButton();
+        jButton_28 = new javax.swing.JButton();
+        jButton_29 = new javax.swing.JButton();
+        jButton_30 = new javax.swing.JButton();
+        jButton_31 = new javax.swing.JButton();
+        jButton_24 = new javax.swing.JButton();
+        jButton_25 = new javax.swing.JButton();
+        jButton_26 = new javax.swing.JButton();
+        jButton_27 = new javax.swing.JButton();
+        jButton_20 = new javax.swing.JButton();
+        jButton_21 = new javax.swing.JButton();
+        jButton_22 = new javax.swing.JButton();
+        jButton_23 = new javax.swing.JButton();
+        jButton_16 = new javax.swing.JButton();
+        jButton_17 = new javax.swing.JButton();
+        jButton_18 = new javax.swing.JButton();
+        jButton_19 = new javax.swing.JButton();
+        jButton_12 = new javax.swing.JButton();
+        jButton_13 = new javax.swing.JButton();
+        jButton_14 = new javax.swing.JButton();
+        jButton_15 = new javax.swing.JButton();
+        jButton_8 = new javax.swing.JButton();
+        jButton_9 = new javax.swing.JButton();
+        jButton_10 = new javax.swing.JButton();
+        jButton_11 = new javax.swing.JButton();
+        jButton_4 = new javax.swing.JButton();
+        jButton_5 = new javax.swing.JButton();
+        jButton_6 = new javax.swing.JButton();
+        jButton_7 = new javax.swing.JButton();
         jButton_0 = new javax.swing.JButton();
         jButton_1 = new javax.swing.JButton();
         jButton_2 = new javax.swing.JButton();
@@ -212,149 +212,62 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         grilleJeu.setBorder(new javax.swing.border.MatteBorder(null));
         grilleJeu.setLayout(new java.awt.GridLayout(12, 4));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_44ActionPerformed(evt);
             }
         });
-        grilleJeu.add(jButton1);
+        grilleJeu.add(jButton_44);
 
-        jButton2.setText("jButton1");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_45.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_45ActionPerformed(evt);
             }
         });
-        grilleJeu.add(jButton2);
+        grilleJeu.add(jButton_45);
+        grilleJeu.add(jButton_46);
+        grilleJeu.add(jButton_47);
+        grilleJeu.add(jButton_40);
+        grilleJeu.add(jButton_41);
+        grilleJeu.add(jButton_42);
+        grilleJeu.add(jButton_43);
+        grilleJeu.add(jButton_36);
+        grilleJeu.add(jButton_37);
+        grilleJeu.add(jButton_38);
+        grilleJeu.add(jButton_39);
+        grilleJeu.add(jButton_32);
+        grilleJeu.add(jButton_33);
+        grilleJeu.add(jButton_34);
+        grilleJeu.add(jButton_35);
+        grilleJeu.add(jButton_28);
+        grilleJeu.add(jButton_29);
+        grilleJeu.add(jButton_30);
+        grilleJeu.add(jButton_31);
+        grilleJeu.add(jButton_24);
+        grilleJeu.add(jButton_25);
+        grilleJeu.add(jButton_26);
+        grilleJeu.add(jButton_27);
+        grilleJeu.add(jButton_20);
+        grilleJeu.add(jButton_21);
+        grilleJeu.add(jButton_22);
+        grilleJeu.add(jButton_23);
+        grilleJeu.add(jButton_16);
+        grilleJeu.add(jButton_17);
+        grilleJeu.add(jButton_18);
+        grilleJeu.add(jButton_19);
+        grilleJeu.add(jButton_12);
+        grilleJeu.add(jButton_13);
+        grilleJeu.add(jButton_14);
+        grilleJeu.add(jButton_15);
+        grilleJeu.add(jButton_8);
+        grilleJeu.add(jButton_9);
+        grilleJeu.add(jButton_10);
+        grilleJeu.add(jButton_11);
+        grilleJeu.add(jButton_4);
+        grilleJeu.add(jButton_5);
+        grilleJeu.add(jButton_6);
+        grilleJeu.add(jButton_7);
 
-        jButton3.setText("jButton1");
-        grilleJeu.add(jButton3);
-
-        jButton4.setText("jButton1");
-        grilleJeu.add(jButton4);
-
-        jButton5.setText("jButton1");
-        grilleJeu.add(jButton5);
-
-        jButton6.setText("jButton1");
-        grilleJeu.add(jButton6);
-
-        jButton7.setText("jButton1");
-        grilleJeu.add(jButton7);
-
-        jButton8.setText("jButton1");
-        grilleJeu.add(jButton8);
-
-        jButton9.setText("jButton1");
-        grilleJeu.add(jButton9);
-
-        jButton10.setText("jButton1");
-        grilleJeu.add(jButton10);
-
-        jButton11.setText("jButton1");
-        grilleJeu.add(jButton11);
-
-        jButton12.setText("jButton1");
-        grilleJeu.add(jButton12);
-
-        jButton13.setText("jButton1");
-        grilleJeu.add(jButton13);
-
-        jButton14.setText("jButton1");
-        grilleJeu.add(jButton14);
-
-        jButton15.setText("jButton1");
-        grilleJeu.add(jButton15);
-
-        jButton16.setText("jButton1");
-        grilleJeu.add(jButton16);
-
-        jButton17.setText("jButton1");
-        grilleJeu.add(jButton17);
-
-        jButton18.setText("jButton1");
-        grilleJeu.add(jButton18);
-
-        jButton19.setText("jButton1");
-        grilleJeu.add(jButton19);
-
-        jButton20.setText("jButton1");
-        grilleJeu.add(jButton20);
-
-        jButton21.setText("jButton1");
-        grilleJeu.add(jButton21);
-
-        jButton22.setText("jButton1");
-        grilleJeu.add(jButton22);
-
-        jButton23.setText("jButton1");
-        grilleJeu.add(jButton23);
-
-        jButton24.setText("jButton1");
-        grilleJeu.add(jButton24);
-
-        jButton25.setText("jButton1");
-        grilleJeu.add(jButton25);
-
-        jButton26.setText("jButton1");
-        grilleJeu.add(jButton26);
-
-        jButton27.setText("jButton1");
-        grilleJeu.add(jButton27);
-
-        jButton28.setText("jButton1");
-        grilleJeu.add(jButton28);
-
-        jButton29.setText("jButton1");
-        grilleJeu.add(jButton29);
-
-        jButton30.setText("jButton1");
-        grilleJeu.add(jButton30);
-
-        jButton31.setText("jButton1");
-        grilleJeu.add(jButton31);
-
-        jButton32.setText("jButton1");
-        grilleJeu.add(jButton32);
-
-        jButton33.setText("jButton1");
-        grilleJeu.add(jButton33);
-
-        jButton34.setText("jButton1");
-        grilleJeu.add(jButton34);
-
-        jButton35.setText("jButton1");
-        grilleJeu.add(jButton35);
-
-        jButton36.setText("jButton1");
-        grilleJeu.add(jButton36);
-
-        jButton37.setText("jButton1");
-        grilleJeu.add(jButton37);
-
-        jButton38.setText("jButton1");
-        grilleJeu.add(jButton38);
-
-        jButton39.setText("jButton1");
-        grilleJeu.add(jButton39);
-
-        jButton40.setText("jButton1");
-        grilleJeu.add(jButton40);
-
-        jButton41.setText("jButton1");
-        grilleJeu.add(jButton41);
-
-        jButton42.setText("jButton1");
-        grilleJeu.add(jButton42);
-
-        jButton43.setText("jButton1");
-        grilleJeu.add(jButton43);
-
-        jButton44.setText("jButton1");
-        grilleJeu.add(jButton44);
-
-        jButton_0.setText("jButton1");
         jButton_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_0ActionPerformed(evt);
@@ -362,7 +275,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_0);
 
-        jButton_1.setText("jButton1");
         jButton_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_1ActionPerformed(evt);
@@ -370,7 +282,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_1);
 
-        jButton_2.setText("jButton1");
         jButton_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_2ActionPerformed(evt);
@@ -378,7 +289,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_2);
 
-        jButton_3.setText("jButton1");
         jButton_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_3ActionPerformed(evt);
@@ -527,7 +437,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(col_yellow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(col_orange, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                    .addComponent(col_orange, javax.swing.GroupLayout.PREFERRED_SIZE, 81, Short.MAX_VALUE)
                     .addComponent(col_blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(41, 41, 41))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_couleursLayout.createSequentialGroup()
@@ -552,14 +462,14 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(col_pink)
                     .addComponent(col_orange))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(pannel_couleurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 300, 240));
 
         jLabel4.setFont(new java.awt.Font("American Typewriter", 1, 24)); // NOI18N
         jLabel4.setText("MASTERMIND");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 170, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 200, 30));
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -619,13 +529,13 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         jButton.setIcon(obj2.img_orange);
     }//GEN-LAST:event_col_orangeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton_45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_45ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton_45ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_44ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_44ActionPerformed
 
     private void jButton_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_0ActionPerformed
         annonce.setText("Séléctionnez une couleur");
@@ -704,14 +614,14 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         if (compteurcoul == 4) {
             compteurcoul = 0;
             obj1.analyse_Jeu_Joueur(ligneEncours());
-            for (int i = 0; i < 4; i++) {
-                if (cellGraph.Pions==1) {
+            //for (int i = 0; i < 4; i++) {
+                //if (cellGraph.Pions==1) {
                     
-                    grilleAnalyse.repaint();
-                } else if (obj1.Indice.get(i) == 0) {
+                   /// grilleAnalyse.repaint();
+                //} else if (obj1.Indice.get(i) == 0) {
 
-                    grilleAnalyse.repaint();
-                }
+                    //grilleAnalyse.repaint();
+                //}
             }
             /*
             if (obj1.analyse_Jeu_Joueur(ligneEncours()) == true) {
@@ -727,7 +637,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
             }
              */
-        }
+        
         //annonce.setText("Séléctionnez une colonne");
 
         grilleJeu.repaint();
@@ -785,54 +695,54 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton col_yellow;
     private javax.swing.JPanel grilleAnalyse;
     private javax.swing.JPanel grilleJeu;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButton_0;
     private javax.swing.JButton jButton_1;
+    private javax.swing.JButton jButton_10;
+    private javax.swing.JButton jButton_11;
+    private javax.swing.JButton jButton_12;
+    private javax.swing.JButton jButton_13;
+    private javax.swing.JButton jButton_14;
+    private javax.swing.JButton jButton_15;
+    private javax.swing.JButton jButton_16;
+    private javax.swing.JButton jButton_17;
+    private javax.swing.JButton jButton_18;
+    private javax.swing.JButton jButton_19;
     private javax.swing.JButton jButton_2;
+    private javax.swing.JButton jButton_20;
+    private javax.swing.JButton jButton_21;
+    private javax.swing.JButton jButton_22;
+    private javax.swing.JButton jButton_23;
+    private javax.swing.JButton jButton_24;
+    private javax.swing.JButton jButton_25;
+    private javax.swing.JButton jButton_26;
+    private javax.swing.JButton jButton_27;
+    private javax.swing.JButton jButton_28;
+    private javax.swing.JButton jButton_29;
     private javax.swing.JButton jButton_3;
+    private javax.swing.JButton jButton_30;
+    private javax.swing.JButton jButton_31;
+    private javax.swing.JButton jButton_32;
+    private javax.swing.JButton jButton_33;
+    private javax.swing.JButton jButton_34;
+    private javax.swing.JButton jButton_35;
+    private javax.swing.JButton jButton_36;
+    private javax.swing.JButton jButton_37;
+    private javax.swing.JButton jButton_38;
+    private javax.swing.JButton jButton_39;
+    private javax.swing.JButton jButton_4;
+    private javax.swing.JButton jButton_40;
+    private javax.swing.JButton jButton_41;
+    private javax.swing.JButton jButton_42;
+    private javax.swing.JButton jButton_43;
+    private javax.swing.JButton jButton_44;
+    private javax.swing.JButton jButton_45;
+    private javax.swing.JButton jButton_46;
+    private javax.swing.JButton jButton_47;
+    private javax.swing.JButton jButton_5;
+    private javax.swing.JButton jButton_6;
+    private javax.swing.JButton jButton_7;
+    private javax.swing.JButton jButton_8;
+    private javax.swing.JButton jButton_9;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

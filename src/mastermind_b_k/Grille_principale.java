@@ -155,7 +155,9 @@ public class Grille_principale {
                             for (int i = 0; i < 6; i++) {
                                 if (tabCoul2[i] == tabOrdi[j]) {// && tabCoul2[i] != "NOP") {
                                     tabCoul2[i] = "NOP";
-                                    Indice.set(k, 1);// sinon on rentre juste un 1// si identique boom on rajoute un 1 u tableau des indices                               
+                                    Indice.set(k, 1);// sinon on rentre juste un 1// si identique boom on rajoute un 1 u tableau des indices 
+                                    CelluleGraphique cellGraph = new CelluleGraphique(Indice.get(k));
+                                    
                                     Verif.set(k, true);
 
                                     break;

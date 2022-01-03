@@ -5,6 +5,7 @@
 package mastermind_b_k;
 
 import java.awt.Button;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -27,7 +28,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     int compteurcoul;
     int ligne;
     int colonne;
-    
+    CelluleGraphique cellGraph = new CelluleGraphique(Pions);
     int emplacement;
     JButton jButton;
     CelluleGraphique obj2 = new CelluleGraphique(Pions);
@@ -46,7 +47,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         
         for (int i = 0; i < 48; i++) {
             Jeu_Joueur.add(null);
-            
+            //cellGraph.Pions=-1;
 
         }
         /*
@@ -174,6 +175,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         panneau_jeu = new javax.swing.JPanel();
         btn_start = new javax.swing.JButton();
         grilleAnalyse = new javax.swing.JPanel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         panneau_affichage = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -414,8 +416,11 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         grilleAnalyse.setBackground(new java.awt.Color(255, 204, 204));
         grilleAnalyse.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         grilleAnalyse.setToolTipText("");
+        grilleAnalyse.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         grilleAnalyse.setLayout(new java.awt.GridLayout(24, 2));
-        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 150, 600));
+        grilleAnalyse.add(filler1);
+
+        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 150, 610));
 
         panneau_affichage.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -705,13 +710,15 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
             
             obj1.analyse_Jeu_Joueur(lignebis,Jeu_Joueur);
             for (int ind=0 ; ind < 4; ind++) {
-                    int mk=0;
+  
+                    CelluleGraphique cellGraph1 = new CelluleGraphique(obj1.Indice.get(ind));
                     
-                    CelluleGraphique cellGraph = new CelluleGraphique(obj1.Indice.get(mk));
-                    grilleAnalyse.add(cellGraph);
-                    grilleAnalyse.repaint(); 
-                   mk++; 
-                
+                    //cellGraph.setBackground(Color.red);
+                    grilleAnalyse.add(cellGraph1);
+                            //if (cellGraph.Pions==0)
+                                
+                    
+     
             }
             /*
             if (obj1.analyse_Jeu_Joueur(ligneEncours()) == true) {
@@ -730,7 +737,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         }
         //annonce.setText("Séléctionnez une colonne");
 
-        
+        grilleAnalyse.repaint(); 
 
     }
 
@@ -783,6 +790,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton col_pink;
     private javax.swing.JButton col_red;
     private javax.swing.JButton col_yellow;
+    private javax.swing.Box.Filler filler1;
     private javax.swing.JPanel grilleAnalyse;
     private javax.swing.JPanel grilleJeu;
     private javax.swing.JButton jButton10;

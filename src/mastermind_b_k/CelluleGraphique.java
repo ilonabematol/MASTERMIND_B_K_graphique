@@ -15,7 +15,7 @@ import javax.swing.JButton;
  */
 public class CelluleGraphique extends JButton {
     int Pions;
-    ArrayList<String> Jeu_Joueur = new ArrayList<String>();
+    
     
     ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.jpeg"));
     ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.jpeg"));
@@ -38,14 +38,23 @@ public class CelluleGraphique extends JButton {
     public void paintComponent ( Graphics G){
         
         super.paintComponent(G);
-        
+        switch (Pions) {
+                case 0:
+                    setIcon(img_white);
+                    break;
+                case 1:
+                    setIcon(img_black);
+                    break;
+                
+            }
+        /*
         if(Pions==0){
             setIcon(img_white);
         }
         else if (Pions==1){
             setIcon(img_black);
         }
-       
+       */
         
         
     }

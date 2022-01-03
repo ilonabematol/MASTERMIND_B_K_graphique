@@ -27,7 +27,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     int compteurcoul;
     int ligne;
     int colonne;
-    int ind;
+    
     int emplacement;
     JButton jButton;
     CelluleGraphique obj2 = new CelluleGraphique(Pions);
@@ -37,7 +37,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     public fenetre_de_jeu() {
         initComponents();
         compteurcoul = 0;
-        ind = -1;
+        
         ligne = -1;
         rappel.setVisible(false);
         pannel_couleurs.setVisible(false);
@@ -46,9 +46,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         
         for (int i = 0; i < 48; i++) {
             Jeu_Joueur.add(null);
-            CelluleGraphique cellGraph = new CelluleGraphique(obj1.Indice.get(i));
-            grilleAnalyse.add(obj2);
-            grilleAnalyse.repaint();
+            
 
         }
         /*
@@ -125,12 +123,12 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
         jPanel1 = new javax.swing.JPanel();
         grilleJeu = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jButton_47 = new javax.swing.JButton();
+        jButton_46 = new javax.swing.JButton();
+        jButton_45 = new javax.swing.JButton();
+        jButton_44 = new javax.swing.JButton();
+        jButton_43 = new javax.swing.JButton();
+        jButton_42 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -212,33 +210,33 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         grilleJeu.setBorder(new javax.swing.border.MatteBorder(null));
         grilleJeu.setLayout(new java.awt.GridLayout(12, 4));
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButton_47.setText("jButton1");
+        jButton_47.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton_47ActionPerformed(evt);
             }
         });
-        grilleJeu.add(jButton1);
+        grilleJeu.add(jButton_47);
 
-        jButton2.setText("jButton1");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton_46.setText("jButton1");
+        jButton_46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton_46ActionPerformed(evt);
             }
         });
-        grilleJeu.add(jButton2);
+        grilleJeu.add(jButton_46);
 
-        jButton3.setText("jButton1");
-        grilleJeu.add(jButton3);
+        jButton_45.setText("jButton1");
+        grilleJeu.add(jButton_45);
 
-        jButton4.setText("jButton1");
-        grilleJeu.add(jButton4);
+        jButton_44.setText("jButton1");
+        grilleJeu.add(jButton_44);
 
-        jButton5.setText("jButton1");
-        grilleJeu.add(jButton5);
+        jButton_43.setText("jButton1");
+        grilleJeu.add(jButton_43);
 
-        jButton6.setText("jButton1");
-        grilleJeu.add(jButton6);
+        jButton_42.setText("jButton1");
+        grilleJeu.add(jButton_42);
 
         jButton7.setText("jButton1");
         grilleJeu.add(jButton7);
@@ -619,13 +617,13 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         jButton.setIcon(obj2.img_orange);
     }//GEN-LAST:event_col_orangeActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton_46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_46ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButton_46ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton_47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_47ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton_47ActionPerformed
 
     private void jButton_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_0ActionPerformed
         annonce.setText("Séléctionnez une couleur");
@@ -703,15 +701,17 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         //affichageGraph();
         if (compteurcoul == 4) {
             compteurcoul = 0;
-            obj1.analyse_Jeu_Joueur(ligneEncours());
-            for (int i = 0; i < 4; i++) {
-                if (cellGraph.Pions==1) {
+            int lignebis=ligneEncours();
+            
+            obj1.analyse_Jeu_Joueur(lignebis,Jeu_Joueur);
+            for (int ind=0 ; ind < 4; ind++) {
+                    int mk=0;
                     
-                    grilleAnalyse.repaint();
-                } else if (obj1.Indice.get(i) == 0) {
-
-                    grilleAnalyse.repaint();
-                }
+                    CelluleGraphique cellGraph = new CelluleGraphique(obj1.Indice.get(mk));
+                    grilleAnalyse.add(cellGraph);
+                    grilleAnalyse.repaint(); 
+                   mk++; 
+                
             }
             /*
             if (obj1.analyse_Jeu_Joueur(ligneEncours()) == true) {
@@ -730,7 +730,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         }
         //annonce.setText("Séléctionnez une colonne");
 
-        grilleJeu.repaint();
+        
 
     }
 
@@ -785,7 +785,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton col_yellow;
     private javax.swing.JPanel grilleAnalyse;
     private javax.swing.JPanel grilleJeu;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -796,7 +795,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
@@ -807,7 +805,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton jButton27;
     private javax.swing.JButton jButton28;
     private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton30;
     private javax.swing.JButton jButton31;
     private javax.swing.JButton jButton32;
@@ -818,14 +815,11 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton40;
     private javax.swing.JButton jButton41;
     private javax.swing.JButton jButton42;
     private javax.swing.JButton jButton43;
     private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
@@ -833,6 +827,12 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton jButton_1;
     private javax.swing.JButton jButton_2;
     private javax.swing.JButton jButton_3;
+    private javax.swing.JButton jButton_42;
+    private javax.swing.JButton jButton_43;
+    private javax.swing.JButton jButton_44;
+    private javax.swing.JButton jButton_45;
+    private javax.swing.JButton jButton_46;
+    private javax.swing.JButton jButton_47;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

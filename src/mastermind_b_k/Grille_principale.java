@@ -21,7 +21,7 @@ public class Grille_principale {
     //String[][] Joueur_combi= new String[12][4];
     // création du tableau de 6 couleur:
     String[] tabCouleur = new String[6];
-    ArrayList<String> Jeu_Joueur = new ArrayList<>();
+    //ArrayList<String> Jeu_Joueur = new ArrayList<>();
     ArrayList<Boolean> Verif = new ArrayList<>();
     ArrayList<Integer> Indice = new ArrayList<>();
     String[] tabCoul2 = new String[6];
@@ -40,7 +40,7 @@ public class Grille_principale {
         
         
         for (int i = 0; i < 48; i++) {
-            Jeu_Joueur.add(null);
+            //Jeu_Joueur.add(null);
             Verif.add(false);
             Indice.add(-1);
         }
@@ -66,7 +66,7 @@ public class Grille_principale {
 
     public String creation_Jeu_Joueur(int nbrecolor ){//, int indPion) {
 
-        Jeu_Joueur.add(tabCouleur[nbrecolor]);
+        //Jeu_Joueur.add(tabCouleur[nbrecolor]);
         return tabCouleur[nbrecolor];
 
     }
@@ -109,7 +109,7 @@ public class Grille_principale {
      *
      * @param line@return
      */
-    public boolean analyse_Jeu_Joueur(int line) {//String[] tabJoueur ,
+    public boolean analyse_Jeu_Joueur(int line, ArrayList<String> Jeu_Joueur) {//String[] tabJoueur ,
         // premiere boucle d'analyse concernant si bonne couleur + bon emplacement
         // a chaque passage de niveau(nouvel ligne) clear le tableau d'indice et même tout les autres ArrayList: --> l'affichage restera;
         // on n'a pas besoin de stocker les valeurs des ArrayList(sauf pour réafficher a chaque fois les niveaux du joueur

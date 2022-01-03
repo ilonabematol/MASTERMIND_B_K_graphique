@@ -17,12 +17,12 @@ public class CelluleGraphique extends JButton {
     int Pions;
     ArrayList<String> Jeu_Joueur = new ArrayList<String>();
     
-    ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.jpeg"));
-    ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.jpeg"));
-    ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.jpeg"));
-    ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.jpeg"));
-    ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.jpeg"));
-    ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.jpeg"));
+    ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.png"));
+    ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.png"));
+    ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.png"));
+    ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.png"));
+    ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.png"));
+    ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.png"));
     ImageIcon img_vide=new javax.swing.ImageIcon(getClass().getResource("/images/vide.jpg"));
     ImageIcon img_white=new javax.swing.ImageIcon(getClass().getResource("/images/White.jpg"));
     ImageIcon img_black=new javax.swing.ImageIcon(getClass().getResource("/images/Black.png"));

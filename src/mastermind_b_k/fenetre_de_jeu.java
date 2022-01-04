@@ -628,12 +628,13 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         panneau_affichageLayout.setHorizontalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_affichageLayout.createSequentialGroup()
-                .addGap(166, 166, 166)
-                .addComponent(jLabel3)
-                .addContainerGap(62, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_affichageLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(panneau_affichageLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panneau_affichageLayout.setVerticalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -641,7 +642,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -720,7 +721,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(col_yellow, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(col_orange, javax.swing.GroupLayout.PREFERRED_SIZE, 81, Short.MAX_VALUE)
+                    .addComponent(col_orange, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
                     .addComponent(col_blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(41, 41, 41))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_couleursLayout.createSequentialGroup()
@@ -766,7 +767,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
         getContentPane().add(rappel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 300, 110));
 
-        btn_start.setBackground(new java.awt.Color(226, 208, 208));
+        btn_start.setBackground(new java.awt.Color(204, 204, 255));
         btn_start.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         btn_start.setText("DEMARRER");
         btn_start.addActionListener(new java.awt.event.ActionListener() {
@@ -781,139 +782,62 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
         grilleAnalyse_0.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        grilleAnalyse_0.setLayout(new java.awt.GridLayout(1, 2));
+        grilleAnalyse_0.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 590, 150, 50));
 
         grilleAnalyse_2.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        grilleAnalyse_2.setLayout(new java.awt.GridLayout(1, 2));
+        grilleAnalyse_2.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 490, 150, 50));
 
         grilleAnalyse_3.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        grilleAnalyse_3.setLayout(new java.awt.GridLayout(1, 2));
+        grilleAnalyse_3.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 440, 150, 50));
 
         grilleAnalyse_1.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        grilleAnalyse_1.setLayout(new java.awt.GridLayout(1, 2));
+        grilleAnalyse_1.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 540, 150, 50));
 
         grilleAnalyse_4.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        grilleAnalyse_4.setLayout(new java.awt.GridLayout(1, 2));
+        grilleAnalyse_4.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 390, 150, 50));
 
         grilleAnalyse_5.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_5Layout = new javax.swing.GroupLayout(grilleAnalyse_5);
-        grilleAnalyse_5.setLayout(grilleAnalyse_5Layout);
-        grilleAnalyse_5Layout.setHorizontalGroup(
-            grilleAnalyse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_5Layout.setVerticalGroup(
-            grilleAnalyse_5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_5.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 150, 50));
 
         grilleAnalyse_6.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_6Layout = new javax.swing.GroupLayout(grilleAnalyse_6);
-        grilleAnalyse_6.setLayout(grilleAnalyse_6Layout);
-        grilleAnalyse_6Layout.setHorizontalGroup(
-            grilleAnalyse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_6Layout.setVerticalGroup(
-            grilleAnalyse_6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_6.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 150, 50));
 
         grilleAnalyse_7.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_7Layout = new javax.swing.GroupLayout(grilleAnalyse_7);
-        grilleAnalyse_7.setLayout(grilleAnalyse_7Layout);
-        grilleAnalyse_7Layout.setHorizontalGroup(
-            grilleAnalyse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_7Layout.setVerticalGroup(
-            grilleAnalyse_7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_7.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_7, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 240, 150, 50));
 
         grilleAnalyse_8.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_8Layout = new javax.swing.GroupLayout(grilleAnalyse_8);
-        grilleAnalyse_8.setLayout(grilleAnalyse_8Layout);
-        grilleAnalyse_8Layout.setHorizontalGroup(
-            grilleAnalyse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_8Layout.setVerticalGroup(
-            grilleAnalyse_8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_8.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_8, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, 150, 50));
 
         grilleAnalyse_9.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_9Layout = new javax.swing.GroupLayout(grilleAnalyse_9);
-        grilleAnalyse_9.setLayout(grilleAnalyse_9Layout);
-        grilleAnalyse_9Layout.setHorizontalGroup(
-            grilleAnalyse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_9Layout.setVerticalGroup(
-            grilleAnalyse_9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_9.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_9, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 150, 50));
 
         grilleAnalyse_10.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_10Layout = new javax.swing.GroupLayout(grilleAnalyse_10);
-        grilleAnalyse_10.setLayout(grilleAnalyse_10Layout);
-        grilleAnalyse_10Layout.setHorizontalGroup(
-            grilleAnalyse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_10Layout.setVerticalGroup(
-            grilleAnalyse_10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_10.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_10, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 150, 50));
 
         grilleAnalyse_11.setBackground(new java.awt.Color(204, 204, 255));
         grilleAnalyse_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        javax.swing.GroupLayout grilleAnalyse_11Layout = new javax.swing.GroupLayout(grilleAnalyse_11);
-        grilleAnalyse_11.setLayout(grilleAnalyse_11Layout);
-        grilleAnalyse_11Layout.setHorizontalGroup(
-            grilleAnalyse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 148, Short.MAX_VALUE)
-        );
-        grilleAnalyse_11Layout.setVerticalGroup(
-            grilleAnalyse_11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 48, Short.MAX_VALUE)
-        );
-
+        grilleAnalyse_11.setLayout(new java.awt.GridLayout(2, 2));
         getContentPane().add(grilleAnalyse_11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 40, 150, 50));
 
         setBounds(0, 0, 1032, 695);
@@ -1261,8 +1185,8 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         return ligne;
     }
     
-    public JPanel grilleAnalyseEncours(){
-        num+=1;
+    public JPanel grilleAnalyseEncours(int num){
+        
         switch (num){
             case 0 :
                 return grilleAnalyse_0;
@@ -1360,7 +1284,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                         if(obj1.Indice.get(ind)!=2){
                             CelluleGraphique cellGraph1 = new CelluleGraphique(obj1.Indice.get(ind));
                             //cellGraph.setBackground(Color.red);
-                            JPanel grilleAnalyse=grilleAnalyseEncours();
+                            JPanel grilleAnalyse=grilleAnalyseEncours(lignebis);
                             grilleAnalyse.add(cellGraph1);
                                     //if (cellGraph.Pions==0) 
                             obj1.Indice.set(ind,2);// on transforme la valeur du tableau indice pour montrer qu'elle a été traitée

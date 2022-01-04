@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  *
@@ -28,6 +29,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     int compteurcoul;
     int ligne;
     int colonne;
+    int num;
     CelluleGraphique cellGraph = new CelluleGraphique(Pions);
     int emplacement;
     JButton jButton;
@@ -38,7 +40,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     public fenetre_de_jeu() {
         initComponents();
         compteurcoul = 0;
-        
+        num=-1;
         ligne = -1;
         rappel.setVisible(false);
         pannel_couleurs.setVisible(false);
@@ -124,58 +126,54 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
         jPanel1 = new javax.swing.JPanel();
         grilleJeu = new javax.swing.JPanel();
-        jButton_47 = new javax.swing.JButton();
-        jButton_46 = new javax.swing.JButton();
-        jButton_45 = new javax.swing.JButton();
         jButton_44 = new javax.swing.JButton();
-        jButton_43 = new javax.swing.JButton();
+        jButton_45 = new javax.swing.JButton();
+        jButton_46 = new javax.swing.JButton();
+        jButton_47 = new javax.swing.JButton();
+        jButton_40 = new javax.swing.JButton();
+        jButton_41 = new javax.swing.JButton();
         jButton_42 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
-        jButton37 = new javax.swing.JButton();
-        jButton38 = new javax.swing.JButton();
-        jButton39 = new javax.swing.JButton();
-        jButton40 = new javax.swing.JButton();
-        jButton41 = new javax.swing.JButton();
-        jButton42 = new javax.swing.JButton();
-        jButton43 = new javax.swing.JButton();
-        jButton44 = new javax.swing.JButton();
+        jButton_43 = new javax.swing.JButton();
+        jButton_36 = new javax.swing.JButton();
+        jButton_37 = new javax.swing.JButton();
+        jButton_38 = new javax.swing.JButton();
+        jButton_39 = new javax.swing.JButton();
+        jButton_32 = new javax.swing.JButton();
+        jButton_33 = new javax.swing.JButton();
+        jButton_34 = new javax.swing.JButton();
+        jButton_35 = new javax.swing.JButton();
+        jButton_28 = new javax.swing.JButton();
+        jButton_29 = new javax.swing.JButton();
+        jButton_30 = new javax.swing.JButton();
+        jButton_31 = new javax.swing.JButton();
+        jButton_24 = new javax.swing.JButton();
+        jButton_25 = new javax.swing.JButton();
+        jButton_26 = new javax.swing.JButton();
+        jButton_27 = new javax.swing.JButton();
+        jButton_20 = new javax.swing.JButton();
+        jButton_21 = new javax.swing.JButton();
+        jButton_22 = new javax.swing.JButton();
+        jButton_23 = new javax.swing.JButton();
+        jButton_16 = new javax.swing.JButton();
+        jButton_17 = new javax.swing.JButton();
+        jButton_18 = new javax.swing.JButton();
+        jButton_19 = new javax.swing.JButton();
+        jButton_12 = new javax.swing.JButton();
+        jButton_13 = new javax.swing.JButton();
+        jButton_14 = new javax.swing.JButton();
+        jButton_15 = new javax.swing.JButton();
+        jButton_8 = new javax.swing.JButton();
+        jButton_9 = new javax.swing.JButton();
+        jButton_10 = new javax.swing.JButton();
+        jButton_11 = new javax.swing.JButton();
+        jButton_4 = new javax.swing.JButton();
+        jButton_5 = new javax.swing.JButton();
+        jButton_6 = new javax.swing.JButton();
+        jButton_7 = new javax.swing.JButton();
         jButton_0 = new javax.swing.JButton();
         jButton_1 = new javax.swing.JButton();
         jButton_2 = new javax.swing.JButton();
         jButton_3 = new javax.swing.JButton();
-        panneau_jeu = new javax.swing.JPanel();
-        btn_start = new javax.swing.JButton();
-        grilleAnalyse = new javax.swing.JPanel();
-        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 32767));
         panneau_affichage = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -192,6 +190,13 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         jLabel5 = new javax.swing.JLabel();
         rappel = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        btn_start = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        grilleAnalyse_0 = new javax.swing.JPanel();
+        grilleAnalyse_1 = new javax.swing.JPanel();
+        grilleAnalyse_2 = new javax.swing.JPanel();
+        grilleAnalyse_3 = new javax.swing.JPanel();
+        grilleAnalyse_4 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -212,15 +217,23 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         grilleJeu.setBorder(new javax.swing.border.MatteBorder(null));
         grilleJeu.setLayout(new java.awt.GridLayout(12, 4));
 
-        jButton_47.setText("jButton1");
-        jButton_47.addActionListener(new java.awt.event.ActionListener() {
+        jButton_44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_44.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton_47ActionPerformed(evt);
+                jButton_44ActionPerformed(evt);
             }
         });
-        grilleJeu.add(jButton_47);
+        grilleJeu.add(jButton_44);
 
-        jButton_46.setText("jButton1");
+        jButton_45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_45.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_45ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_45);
+
+        jButton_46.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton_46.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_46ActionPerformed(evt);
@@ -228,133 +241,335 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_46);
 
-        jButton_45.setText("jButton1");
-        grilleJeu.add(jButton_45);
+        jButton_47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_47.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_47ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_47);
 
-        jButton_44.setText("jButton1");
-        grilleJeu.add(jButton_44);
+        jButton_40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_40.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_40ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_40);
 
-        jButton_43.setText("jButton1");
-        grilleJeu.add(jButton_43);
+        jButton_41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_41.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_41ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_41);
 
-        jButton_42.setText("jButton1");
+        jButton_42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_42.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_42ActionPerformed(evt);
+            }
+        });
         grilleJeu.add(jButton_42);
 
-        jButton7.setText("jButton1");
-        grilleJeu.add(jButton7);
+        jButton_43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_43.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_43ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_43);
 
-        jButton8.setText("jButton1");
-        grilleJeu.add(jButton8);
+        jButton_36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_36ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_36);
 
-        jButton9.setText("jButton1");
-        grilleJeu.add(jButton9);
+        jButton_37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_37ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_37);
 
-        jButton10.setText("jButton1");
-        grilleJeu.add(jButton10);
+        jButton_38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_38ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_38);
 
-        jButton11.setText("jButton1");
-        grilleJeu.add(jButton11);
+        jButton_39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_39ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_39);
 
-        jButton12.setText("jButton1");
-        grilleJeu.add(jButton12);
+        jButton_32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_32ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_32);
 
-        jButton13.setText("jButton1");
-        grilleJeu.add(jButton13);
+        jButton_33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_33ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_33);
 
-        jButton14.setText("jButton1");
-        grilleJeu.add(jButton14);
+        jButton_34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_34ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_34);
 
-        jButton15.setText("jButton1");
-        grilleJeu.add(jButton15);
+        jButton_35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_35ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_35);
 
-        jButton16.setText("jButton1");
-        grilleJeu.add(jButton16);
+        jButton_28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_28ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_28);
 
-        jButton17.setText("jButton1");
-        grilleJeu.add(jButton17);
+        jButton_29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_29ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_29);
 
-        jButton18.setText("jButton1");
-        grilleJeu.add(jButton18);
+        jButton_30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_30ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_30);
 
-        jButton19.setText("jButton1");
-        grilleJeu.add(jButton19);
+        jButton_31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_31ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_31);
 
-        jButton20.setText("jButton1");
-        grilleJeu.add(jButton20);
+        jButton_24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_24ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_24);
 
-        jButton21.setText("jButton1");
-        grilleJeu.add(jButton21);
+        jButton_25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_25ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_25);
 
-        jButton22.setText("jButton1");
-        grilleJeu.add(jButton22);
+        jButton_26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_26ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_26);
 
-        jButton23.setText("jButton1");
-        grilleJeu.add(jButton23);
+        jButton_27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_27ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_27);
 
-        jButton24.setText("jButton1");
-        grilleJeu.add(jButton24);
+        jButton_20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_20ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_20);
 
-        jButton25.setText("jButton1");
-        grilleJeu.add(jButton25);
+        jButton_21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_21ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_21);
 
-        jButton26.setText("jButton1");
-        grilleJeu.add(jButton26);
+        jButton_22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_22ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_22);
 
-        jButton27.setText("jButton1");
-        grilleJeu.add(jButton27);
+        jButton_23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_23ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_23);
 
-        jButton28.setText("jButton1");
-        grilleJeu.add(jButton28);
+        jButton_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_16ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_16);
 
-        jButton29.setText("jButton1");
-        grilleJeu.add(jButton29);
+        jButton_17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_17ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_17);
 
-        jButton30.setText("jButton1");
-        grilleJeu.add(jButton30);
+        jButton_18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_18ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_18);
 
-        jButton31.setText("jButton1");
-        grilleJeu.add(jButton31);
+        jButton_19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_19ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_19);
 
-        jButton32.setText("jButton1");
-        grilleJeu.add(jButton32);
+        jButton_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_12ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_12);
 
-        jButton33.setText("jButton1");
-        grilleJeu.add(jButton33);
+        jButton_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_13ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_13);
 
-        jButton34.setText("jButton1");
-        grilleJeu.add(jButton34);
+        jButton_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_14ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_14);
 
-        jButton35.setText("jButton1");
-        grilleJeu.add(jButton35);
+        jButton_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_15ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_15);
 
-        jButton36.setText("jButton1");
-        grilleJeu.add(jButton36);
+        jButton_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_8ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_8);
 
-        jButton37.setText("jButton1");
-        grilleJeu.add(jButton37);
+        jButton_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_9ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_9);
 
-        jButton38.setText("jButton1");
-        grilleJeu.add(jButton38);
+        jButton_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_10ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_10);
 
-        jButton39.setText("jButton1");
-        grilleJeu.add(jButton39);
+        jButton_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_11ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_11);
 
-        jButton40.setText("jButton1");
-        grilleJeu.add(jButton40);
+        jButton_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_4ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_4);
 
-        jButton41.setText("jButton1");
-        grilleJeu.add(jButton41);
+        jButton_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_5ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_5);
 
-        jButton42.setText("jButton1");
-        grilleJeu.add(jButton42);
+        jButton_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_6ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_6);
 
-        jButton43.setText("jButton1");
-        grilleJeu.add(jButton43);
+        jButton_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        jButton_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_7ActionPerformed(evt);
+            }
+        });
+        grilleJeu.add(jButton_7);
 
-        jButton44.setText("jButton1");
-        grilleJeu.add(jButton44);
-
-        jButton_0.setText("jButton1");
+        jButton_0.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton_0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_0ActionPerformed(evt);
@@ -362,7 +577,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_0);
 
-        jButton_1.setText("jButton1");
+        jButton_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_1ActionPerformed(evt);
@@ -370,7 +585,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_1);
 
-        jButton_2.setText("jButton1");
+        jButton_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_2ActionPerformed(evt);
@@ -378,7 +593,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         });
         grilleJeu.add(jButton_2);
 
-        jButton_3.setText("jButton1");
+        jButton_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jButton_3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_3ActionPerformed(evt);
@@ -388,41 +603,8 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
         getContentPane().add(grilleJeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 400, 600));
 
-        panneau_jeu.setBackground(new java.awt.Color(255, 204, 204));
-
-        btn_start.setText("Démarrer");
-        btn_start.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_startActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout panneau_jeuLayout = new javax.swing.GroupLayout(panneau_jeu);
-        panneau_jeu.setLayout(panneau_jeuLayout);
-        panneau_jeuLayout.setHorizontalGroup(
-            panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panneau_jeuLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(btn_start, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
-        );
-        panneau_jeuLayout.setVerticalGroup(
-            panneau_jeuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btn_start, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        getContentPane().add(panneau_jeu, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 300, 50));
-
-        grilleAnalyse.setBackground(new java.awt.Color(255, 204, 204));
-        grilleAnalyse.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        grilleAnalyse.setToolTipText("");
-        grilleAnalyse.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        grilleAnalyse.setLayout(new java.awt.GridLayout(24, 2));
-        grilleAnalyse.add(filler1);
-
-        getContentPane().add(grilleAnalyse, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 30, 150, 610));
-
         panneau_affichage.setBackground(new java.awt.Color(204, 204, 204));
+        panneau_affichage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         jLabel3.setText("GAME");
@@ -439,26 +621,29 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         panneau_affichageLayout.setHorizontalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_affichageLayout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panneau_affichageLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addGroup(panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panneau_affichageLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel3)
+                        .addGap(0, 49, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
         );
         panneau_affichageLayout.setVerticalGroup(
             panneau_affichageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panneau_affichageLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(89, 89, 89)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(panneau_affichage, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 300, 120));
 
         pannel_couleurs.setBackground(new java.awt.Color(204, 204, 204));
+        pannel_couleurs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
 
         jLabel2.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         jLabel2.setText("Choix couleurs");
@@ -534,7 +719,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                     .addComponent(col_blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(41, 41, 41))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_couleursLayout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(68, 68, 68))
         );
@@ -555,14 +740,15 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
                 .addGroup(pannel_couleursLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(col_pink)
                     .addComponent(col_orange))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         getContentPane().add(pannel_couleurs, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 280, 300, 240));
 
         jLabel4.setFont(new java.awt.Font("American Typewriter", 1, 24)); // NOI18N
         jLabel4.setText("MASTERMIND");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 170, 30));
+        jLabel4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 200, 30));
 
         jLabel5.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 24)); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -574,6 +760,39 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         rappel.setViewportView(jTextArea2);
 
         getContentPane().add(rappel, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 300, 110));
+
+        btn_start.setBackground(new java.awt.Color(226, 208, 208));
+        btn_start.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        btn_start.setText("DEMARRER");
+        btn_start.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_startActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btn_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 230, 50));
+
+        jLabel1.setText("Grille d'Indices");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, 110, 20));
+
+        grilleAnalyse_0.setBackground(new java.awt.Color(229, 208, 208));
+        grilleAnalyse_0.setLayout(new java.awt.GridLayout(1, 2));
+        getContentPane().add(grilleAnalyse_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 580, 170, 60));
+
+        grilleAnalyse_1.setBackground(new java.awt.Color(229, 208, 208));
+        grilleAnalyse_1.setLayout(new java.awt.GridLayout(1, 2));
+        getContentPane().add(grilleAnalyse_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 160, 60));
+
+        grilleAnalyse_2.setBackground(new java.awt.Color(229, 208, 208));
+        grilleAnalyse_2.setLayout(new java.awt.GridLayout(1, 2));
+        getContentPane().add(grilleAnalyse_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 160, 60));
+
+        grilleAnalyse_3.setBackground(new java.awt.Color(229, 208, 208));
+        grilleAnalyse_3.setLayout(new java.awt.GridLayout(1, 2));
+        getContentPane().add(grilleAnalyse_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 160, 60));
+
+        grilleAnalyse_4.setBackground(new java.awt.Color(229, 208, 208));
+        grilleAnalyse_4.setLayout(new java.awt.GridLayout(1, 2));
+        getContentPane().add(grilleAnalyse_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 580, 160, 60));
 
         setBounds(0, 0, 1032, 695);
     }// </editor-fold>//GEN-END:initComponents
@@ -622,13 +841,17 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         jButton.setIcon(obj2.img_orange);
     }//GEN-LAST:event_col_orangeActionPerformed
 
-    private void jButton_46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_46ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_46ActionPerformed
+    private void jButton_45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_45ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(45, "attente d'une couleur");
+        jButton = jButton_45;
+    }//GEN-LAST:event_jButton_45ActionPerformed
 
-    private void jButton_47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_47ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton_47ActionPerformed
+    private void jButton_44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_44ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(44, "attente d'une couleur");
+        jButton = jButton_44;
+    }//GEN-LAST:event_jButton_44ActionPerformed
 
     private void jButton_0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_0ActionPerformed
         annonce.setText("Séléctionnez une couleur");
@@ -654,16 +877,312 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         jButton = jButton_3;
     }//GEN-LAST:event_jButton_3ActionPerformed
 
-    public int placerDansColonne(int col) {
-        colonne = col - 1;
-        int indplacement = ligneEncours() * 4 + colonne;
-        //activeButton_coul();
-        return indplacement;
-    }
+    private void jButton_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_4ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(4, "attente d'une couleur");
+        jButton = jButton_4;
+    }//GEN-LAST:event_jButton_4ActionPerformed
+
+    private void jButton_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_5ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(5, "attente d'une couleur");
+        jButton = jButton_5;
+    }//GEN-LAST:event_jButton_5ActionPerformed
+
+    private void jButton_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_6ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(6, "attente d'une couleur");
+        jButton = jButton_6;
+    }//GEN-LAST:event_jButton_6ActionPerformed
+
+    private void jButton_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_7ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(7, "attente d'une couleur");
+        jButton = jButton_7;
+    }//GEN-LAST:event_jButton_7ActionPerformed
+
+    private void jButton_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_8ActionPerformed
+                annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(8, "attente d'une couleur");
+        jButton = jButton_8;
+
+    }//GEN-LAST:event_jButton_8ActionPerformed
+
+    private void jButton_9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_9ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(9, "attente d'une couleur");
+        jButton = jButton_9;
+    }//GEN-LAST:event_jButton_9ActionPerformed
+
+    private void jButton_10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_10ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(10, "attente d'une couleur");
+        jButton = jButton_10;
+    }//GEN-LAST:event_jButton_10ActionPerformed
+
+    private void jButton_11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_11ActionPerformed
+          annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(11, "attente d'une couleur");
+        jButton = jButton_11;
+    }//GEN-LAST:event_jButton_11ActionPerformed
+
+    private void jButton_12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_12ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(12, "attente d'une couleur");
+        jButton = jButton_12;
+    }//GEN-LAST:event_jButton_12ActionPerformed
+
+    private void jButton_13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_13ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(13, "attente d'une couleur");
+        jButton = jButton_13;
+    }//GEN-LAST:event_jButton_13ActionPerformed
+
+    private void jButton_14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_14ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(14, "attente d'une couleur");
+        jButton = jButton_14;
+    }//GEN-LAST:event_jButton_14ActionPerformed
+
+    private void jButton_15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_15ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(15, "attente d'une couleur");
+        jButton = jButton_15;
+    }//GEN-LAST:event_jButton_15ActionPerformed
+
+    private void jButton_16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_16ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(16, "attente d'une couleur");
+        jButton = jButton_16;
+    }//GEN-LAST:event_jButton_16ActionPerformed
+
+    private void jButton_17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_17ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(17, "attente d'une couleur");
+        jButton = jButton_17;
+    }//GEN-LAST:event_jButton_17ActionPerformed
+
+    private void jButton_18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_18ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(18, "attente d'une couleur");
+        jButton = jButton_18;
+    }//GEN-LAST:event_jButton_18ActionPerformed
+
+    private void jButton_19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_19ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(19, "attente d'une couleur");
+        jButton = jButton_19;
+
+    }//GEN-LAST:event_jButton_19ActionPerformed
+
+    private void jButton_20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_20ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(20, "attente d'une couleur");
+        jButton = jButton_20;
+    }//GEN-LAST:event_jButton_20ActionPerformed
+
+    private void jButton_21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_21ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(21, "attente d'une couleur");
+        jButton = jButton_21;
+    }//GEN-LAST:event_jButton_21ActionPerformed
+
+    private void jButton_22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_22ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(22, "attente d'une couleur");
+        jButton = jButton_22;
+    }//GEN-LAST:event_jButton_22ActionPerformed
+
+    private void jButton_23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_23ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(23, "attente d'une couleur");
+        jButton = jButton_23;
+    }//GEN-LAST:event_jButton_23ActionPerformed
+
+    private void jButton_24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_24ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(24, "attente d'une couleur");
+        jButton = jButton_24;
+    }//GEN-LAST:event_jButton_24ActionPerformed
+
+    private void jButton_25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_25ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(25, "attente d'une couleur");
+        jButton = jButton_25;
+    }//GEN-LAST:event_jButton_25ActionPerformed
+
+    private void jButton_26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_26ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(26, "attente d'une couleur");
+        jButton = jButton_26;
+    }//GEN-LAST:event_jButton_26ActionPerformed
+
+    private void jButton_27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_27ActionPerformed
+          annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(27, "attente d'une couleur");
+        jButton = jButton_27;
+    }//GEN-LAST:event_jButton_27ActionPerformed
+
+    private void jButton_28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_28ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(28, "attente d'une couleur");
+        jButton = jButton_28;
+    }//GEN-LAST:event_jButton_28ActionPerformed
+
+    private void jButton_29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_29ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(29, "attente d'une couleur");
+        jButton = jButton_29;
+    }//GEN-LAST:event_jButton_29ActionPerformed
+
+    private void jButton_30ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_30ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(30, "attente d'une couleur");
+        jButton = jButton_30;
+    }//GEN-LAST:event_jButton_30ActionPerformed
+
+    private void jButton_31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_31ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(31, "attente d'une couleur");
+        jButton = jButton_31;
+    }//GEN-LAST:event_jButton_31ActionPerformed
+
+    private void jButton_32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_32ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(32, "attente d'une couleur");
+        jButton = jButton_32;
+    }//GEN-LAST:event_jButton_32ActionPerformed
+
+    private void jButton_33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_33ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(33, "attente d'une couleur");
+        jButton = jButton_33;
+    }//GEN-LAST:event_jButton_33ActionPerformed
+
+    private void jButton_34ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_34ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(34, "attente d'une couleur");
+        jButton = jButton_34;
+    }//GEN-LAST:event_jButton_34ActionPerformed
+
+    private void jButton_35ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_35ActionPerformed
+       annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(35, "attente d'une couleur");
+        jButton = jButton_35;
+    }//GEN-LAST:event_jButton_35ActionPerformed
+
+    private void jButton_36ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_36ActionPerformed
+       annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(36, "attente d'une couleur");
+        jButton = jButton_36;
+
+    }//GEN-LAST:event_jButton_36ActionPerformed
+
+    private void jButton_37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_37ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(37, "attente d'une couleur");
+        jButton = jButton_37;
+    }//GEN-LAST:event_jButton_37ActionPerformed
+
+    private void jButton_38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_38ActionPerformed
+       annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(38, "attente d'une couleur");
+        jButton = jButton_38;
+    }//GEN-LAST:event_jButton_38ActionPerformed
+
+    private void jButton_39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_39ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(39, "attente d'une couleur");
+        jButton = jButton_39;
+    }//GEN-LAST:event_jButton_39ActionPerformed
+
+    private void jButton_40ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_40ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(40, "attente d'une couleur");
+        jButton = jButton_40;
+    }//GEN-LAST:event_jButton_40ActionPerformed
+
+    private void jButton_41ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_41ActionPerformed
+         annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(41, "attente d'une couleur");
+        jButton = jButton_41;
+    }//GEN-LAST:event_jButton_41ActionPerformed
+
+    private void jButton_42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_42ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(42, "attente d'une couleur");
+        jButton = jButton_42;
+    }//GEN-LAST:event_jButton_42ActionPerformed
+
+    private void jButton_43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_43ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(43, "attente d'une couleur");
+        jButton = jButton_43;
+    }//GEN-LAST:event_jButton_43ActionPerformed
+
+    private void jButton_46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_46ActionPerformed
+          annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(46, "attente d'une couleur");
+        jButton = jButton_46;
+    }//GEN-LAST:event_jButton_46ActionPerformed
+
+    private void jButton_47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_47ActionPerformed
+        annonce.setText("Séléctionnez une couleur");
+        Jeu_Joueur.set(47, "attente d'une couleur");
+        jButton = jButton_47;
+    }//GEN-LAST:event_jButton_47ActionPerformed
+
+
 
     public int ligneEncours() {
         ligne += 1;
         return ligne;
+    }
+    
+    public JPanel grilleAnalyseEncours(){
+        num+=1;
+        switch (num){
+            case 0 :
+                return grilleAnalyse_0;
+                
+            case 1 :
+                return grilleAnalyse_1;
+                
+            case 2 :
+                return grilleAnalyse_2;
+                
+            case 3 :
+                return grilleAnalyse_3;
+                
+            case 4 :
+                return grilleAnalyse_4;
+            /*    
+            case 5 :
+                return grilleAnalyse_5;
+                
+            case 6 :
+                return grilleAnalyse_0;
+                
+            case 7 :
+                return grilleAnalyse_0;
+                
+            case 8 :
+                return grilleAnalyse_0;
+                
+            case 9 :
+                return grilleAnalyse_0;
+                
+            case 10 :
+                return grilleAnalyse_0;
+                
+            case 11 :
+                return grilleAnalyse_0;
+            
+            case 12 :
+                return grilleAnalyse_0;
+               */
+        }
+        return null;
     }
 
     public void activeButton_coul() {
@@ -686,12 +1205,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
     }
 
-    /*
-    public int avanc(){
-        ind+=1;
-        return ind;
-    }
-     */
+
     public void choixcoul(int indcoul) {
         //desactiveButton_coul();
         compteurcoul += 1;
@@ -701,44 +1215,45 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         int index = Jeu_Joueur.indexOf("attente d'une couleur");
         Jeu_Joueur.set(index, obj1.creation_Jeu_Joueur(indcoul));
 
-        System.out.println(Jeu_Joueur);
 
-        //affichageGraph();
         if (compteurcoul == 4) {
+            System.out.println(Jeu_Joueur);
             compteurcoul = 0;
             int lignebis=ligneEncours();
-            
-            obj1.analyse_Jeu_Joueur(lignebis,Jeu_Joueur);
-            for (int ind=0 ; ind < 4; ind++) {
-  
-                    CelluleGraphique cellGraph1 = new CelluleGraphique(obj1.Indice.get(ind));
-                    
-                    //cellGraph.setBackground(Color.red);
-                    grilleAnalyse.add(cellGraph1);
-                            //if (cellGraph.Pions==0)
-                                
-                    
-     
-            }
-            /*
-            if (obj1.analyse_Jeu_Joueur(ligneEncours()) == true) {
+
+            if (obj1.analyse_Jeu_Joueur(lignebis,Jeu_Joueur) == true) {
                 grilleJeu.setVisible(false);
-                grilleAnalyse.setVisible(false);
+                //grilleAnalyse.setVisible(false);
                 annonce.setText("Vous avez gagné!!!");
             }
             if (Jeu_Joueur.size() == 4) {
 
                 grilleJeu.setVisible(false);
-                grilleAnalyse.setVisible(false);
+                //grilleAnalyse.setVisible(false);
                 annonce.setText("Vous avez perdu!!!");
 
             }
-             */
+            
+             for (int ind=0; ind < 48; ind++) {
+                    if(obj1.Verif.get(ind)==true ){
+                        if(obj1.Indice.get(ind)!=2){
+                            CelluleGraphique cellGraph1 = new CelluleGraphique(obj1.Indice.get(ind));
+                            //cellGraph.setBackground(Color.red);
+                            JPanel grilleAnalyse=grilleAnalyseEncours();
+                            grilleAnalyse.add(cellGraph1);
+                                    //if (cellGraph.Pions==0) 
+                            obj1.Indice.set(ind,2);// on transforme la valeur du tableau indice pour montrer qu'elle a été traitée
+                            grilleAnalyse.repaint();
+                        }
+                    }
+                    else{
+                        break;
+                    }
+       
+     
+            }
+        
         }
-        //annonce.setText("Séléctionnez une colonne");
-
-        grilleAnalyse.repaint(); 
-
     }
 
     public void initialiserPartie() {
@@ -790,57 +1305,61 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton col_pink;
     private javax.swing.JButton col_red;
     private javax.swing.JButton col_yellow;
-    private javax.swing.Box.Filler filler1;
-    private javax.swing.JPanel grilleAnalyse;
+    private javax.swing.JPanel grilleAnalyse_0;
+    private javax.swing.JPanel grilleAnalyse_1;
+    private javax.swing.JPanel grilleAnalyse_2;
+    private javax.swing.JPanel grilleAnalyse_3;
+    private javax.swing.JPanel grilleAnalyse_4;
     private javax.swing.JPanel grilleJeu;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
-    private javax.swing.JButton jButton37;
-    private javax.swing.JButton jButton38;
-    private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton40;
-    private javax.swing.JButton jButton41;
-    private javax.swing.JButton jButton42;
-    private javax.swing.JButton jButton43;
-    private javax.swing.JButton jButton44;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButton_0;
     private javax.swing.JButton jButton_1;
+    private javax.swing.JButton jButton_10;
+    private javax.swing.JButton jButton_11;
+    private javax.swing.JButton jButton_12;
+    private javax.swing.JButton jButton_13;
+    private javax.swing.JButton jButton_14;
+    private javax.swing.JButton jButton_15;
+    private javax.swing.JButton jButton_16;
+    private javax.swing.JButton jButton_17;
+    private javax.swing.JButton jButton_18;
+    private javax.swing.JButton jButton_19;
     private javax.swing.JButton jButton_2;
+    private javax.swing.JButton jButton_20;
+    private javax.swing.JButton jButton_21;
+    private javax.swing.JButton jButton_22;
+    private javax.swing.JButton jButton_23;
+    private javax.swing.JButton jButton_24;
+    private javax.swing.JButton jButton_25;
+    private javax.swing.JButton jButton_26;
+    private javax.swing.JButton jButton_27;
+    private javax.swing.JButton jButton_28;
+    private javax.swing.JButton jButton_29;
     private javax.swing.JButton jButton_3;
+    private javax.swing.JButton jButton_30;
+    private javax.swing.JButton jButton_31;
+    private javax.swing.JButton jButton_32;
+    private javax.swing.JButton jButton_33;
+    private javax.swing.JButton jButton_34;
+    private javax.swing.JButton jButton_35;
+    private javax.swing.JButton jButton_36;
+    private javax.swing.JButton jButton_37;
+    private javax.swing.JButton jButton_38;
+    private javax.swing.JButton jButton_39;
+    private javax.swing.JButton jButton_4;
+    private javax.swing.JButton jButton_40;
+    private javax.swing.JButton jButton_41;
     private javax.swing.JButton jButton_42;
     private javax.swing.JButton jButton_43;
     private javax.swing.JButton jButton_44;
     private javax.swing.JButton jButton_45;
     private javax.swing.JButton jButton_46;
     private javax.swing.JButton jButton_47;
+    private javax.swing.JButton jButton_5;
+    private javax.swing.JButton jButton_6;
+    private javax.swing.JButton jButton_7;
+    private javax.swing.JButton jButton_8;
+    private javax.swing.JButton jButton_9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -849,7 +1368,6 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JPanel panneau_affichage;
-    private javax.swing.JPanel panneau_jeu;
     private javax.swing.JPanel pannel_couleurs;
     private javax.swing.JScrollPane rappel;
     // End of variables declaration//GEN-END:variables

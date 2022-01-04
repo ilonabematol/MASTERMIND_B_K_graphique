@@ -17,13 +17,13 @@ public class CelluleGraphique extends JButton {
     int Pions;
     
     
-    ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.jpeg"));
-    ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.jpeg"));
-    ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.jpeg"));
-    ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.jpeg"));
-    ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.jpeg"));
-    ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.jpeg"));
-    ImageIcon img_vide=new javax.swing.ImageIcon(getClass().getResource("/images/vide.jpg"));
+    ImageIcon img_blue=new javax.swing.ImageIcon(getClass().getResource("/images/Blue.png"));
+    ImageIcon img_green=new javax.swing.ImageIcon(getClass().getResource("/images/Green.png"));
+    ImageIcon img_orange=new javax.swing.ImageIcon(getClass().getResource("/images/Orange.png"));
+    ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.png"));
+    ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.png"));
+    ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.png"));
+    ImageIcon img_videbis=new javax.swing.ImageIcon(getClass().getResource("/images/videbis.jpg"));
     ImageIcon img_white=new javax.swing.ImageIcon(getClass().getResource("/images/White.jpg"));
     ImageIcon img_black=new javax.swing.ImageIcon(getClass().getResource("/images/Black.png"));
     
@@ -45,6 +45,8 @@ public class CelluleGraphique extends JButton {
                 case 1:
                     setIcon(img_black);
                     break;
+                case -1:
+                    setIcon(img_videbis);
                 
             }
         /*

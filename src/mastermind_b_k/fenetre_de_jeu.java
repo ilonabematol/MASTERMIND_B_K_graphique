@@ -22,33 +22,29 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     /**
      * Creates new form fenetre_de_jeu
      */
-    Grille_principale obj1 = new Grille_principale();
-    ArrayList<Integer> Indice = new ArrayList<>();
-    ArrayList<String> Jeu_Joueur = new ArrayList<String>();
+    Grille_principale obj1 = new Grille_principale(); //création de l'objet issu de la Grille_principale
+    ArrayList<Integer> Indice = new ArrayList<>();//création de l'arrayList Indice qui va regrouper tous les indices issu du Jeu_Joueur;
+    ArrayList<String> Jeu_Joueur = new ArrayList<String>();//création de l'arrayList Indice qui va regrouper tous les indices issu du Jeu_Joueur;
     int Pions;
     int compteurcoul;
     int ligne;
     int colonne;
     int num;
-    CelluleGraphique cellGraph = new CelluleGraphique(Pions);
-    int emplacement;
+    CelluleGraphique obj2 = new CelluleGraphique(Pions);// //création de l'objet issu de la CelluleGraphique
     JButton jButton;
-    CelluleGraphique obj2 = new CelluleGraphique(Pions);// création d'un objet pour faire appel au méthode de la classe cellule graphique 
-    
-    //Grille_principale grille= new Grille_principale() ;
 
     public fenetre_de_jeu() {
         initComponents();
         compteurcoul = 0;
         num=-1;
         ligne = -1;
-        rappel.setVisible(false);
-        pannel_couleurs.setVisible(false);
-        panneau_affichage.setVisible(false);
-
+        rappel.setVisible(false);// on n'affiche pas le panneau des rappels au début
+        pannel_couleurs.setVisible(false);// ni celui des couleurs 
+        panneau_affichage.setVisible(false);// ni celui de l'affichage 
+        grilleJeu.setVisible(false); // et toujours pas la grille de jeu 
         
         for (int i = 0; i < 48; i++) {
-            Jeu_Joueur.add(null);
+            Jeu_Joueur.add(null);// on initialise l'arraylist avec qui des null pour le joueur 
             //cellGraph.Pions=-1;
 
         }
@@ -794,8 +790,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         pannel_couleurs.setVisible(true);// affiche le panneau des couleurs 
         panneau_affichage.setVisible(true);// affiche le panneau d'affichage 
         initialiserPartie();// on initialise la partie 
-        annonce.setText("Le jeu commence: Séléctionnez une colonne");
-
+        annonce.setText("Le jeu commence: Séléctionnez un bouton \n de la ligne 1");
+        grilleJeu.setVisible(true);
         grilleJeu.repaint();// on actualise la grille de jeu 
         btn_start.setEnabled(false);//pour ne pas que l'on recommence toujours une partie - désactive le bouton
     }//GEN-LAST:event_btn_startActionPerformed
@@ -803,42 +799,47 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     *les methodes suivantes permettent de modifer la couleur 
     */
     private void col_yellowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_yellowActionPerformed
-        choixcoul(3);
-        jButton.setIcon(obj2.img_yellow);
+        choixcoul(3);//on appelle la fonction choixcoul pour enclencher le remplissage de Jeu_Joueur
+        jButton.setIcon(obj2.img_yellow);//aprés la fonction choixcoul , on change la couleur du bouton avec la couleur associée
+        
     }//GEN-LAST:event_col_yellowActionPerformed
 
     private void col_redActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_redActionPerformed
 
         choixcoul(0);
         jButton.setIcon(obj2.img_red);
-
+        
     }//GEN-LAST:event_col_redActionPerformed
 
     private void col_greenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_greenActionPerformed
         choixcoul(2);
         jButton.setIcon(obj2.img_green);
+        
     }//GEN-LAST:event_col_greenActionPerformed
 
     private void col_pinkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_pinkActionPerformed
         choixcoul(1);
         jButton.setIcon(obj2.img_pink);
+        
     }//GEN-LAST:event_col_pinkActionPerformed
 
     private void col_blueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_blueActionPerformed
         choixcoul(5);
         jButton.setIcon(obj2.img_blue);
+        
     }//GEN-LAST:event_col_blueActionPerformed
 
     private void col_orangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_orangeActionPerformed
         choixcoul(4);
         jButton.setIcon(obj2.img_orange);
+      
     }//GEN-LAST:event_col_orangeActionPerformed
 /*
     *les méthodes suivantes correspondent au 48 boutons du jeu , l'utilisateur va clique sur le bouton puis on va faire appel à la méthode des couleurs pour actualiser la couleur 
     */
     private void jButton_45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_45ActionPerformed
         annonce.setText("Séléctionnez une couleur");
-        Jeu_Joueur.set(45, "attente d'une couleur");
+        Jeu_Joueur.set(45, "attente d'une couleur");//ajout  d'un élément dnas notre arrayList Jeu_joueur a l'inice 45 // même chose pour tout les autres boutons selon les emplacements
         jButton = jButton_45;
     }//GEN-LAST:event_jButton_45ActionPerformed
 
@@ -1137,7 +1138,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     }
     
     /**
-     *cette méthode permet de changer de grille d'indice en fonction du tour auquel on se trouve 
+     *cette méthode permet de changer de grille d'indice(utiliséour l'affichage) en fonction du tour auquel on se trouve 
      * @param num correspond au panel de la ligne en cours 
      * @return les grilles d'indice 
      */
@@ -1186,63 +1187,42 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
         return null;
     }
 
-    /**
-     *permet d'ativer les boutons des couleurs 
-     */
-    public void activeButton_coul() {
-        col_red.setEnabled(true);
-        col_yellow.setEnabled(true);
-        col_pink.setEnabled(true);
-        col_blue.setEnabled(true);
-        col_orange.setEnabled(true);
-        col_green.setEnabled(true);
-
-    }
+    
 
     /**
-     *permet de désactiver les boutons des couleurs 
-     */
-    public void desactiveButton_coul() {
-        col_red.setEnabled(false);
-        col_yellow.setEnabled(false);
-        col_pink.setEnabled(false);
-        col_blue.setEnabled(false);
-        col_orange.setEnabled(false);
-        col_green.setEnabled(false);
-
-    }
-
-    /**
-     *cette méthode permet d'nalayser les combinaisons du joueur  à chaque tour et de determiner quand il a gagné 
+     *cette méthode permet d'analayser les combinaisons du joueur  à chaque tour et de determiner quand il a gagné 
      * @param indcoul indice de la couelur 
      */
     public void choixcoul(int indcoul) {
-        //desactiveButton_coul();
+        
         compteurcoul += 1;
-        //int ind=Jeu_Joueur.indexOf("Attente de couleur");
-        //int i=avanc();
+        
 
         int index = Jeu_Joueur.indexOf("attente d'une couleur");
         Jeu_Joueur.set(index, obj1.creation_Jeu_Joueur(indcoul));// on change dans l'arraylist pour savoir quelle case doit être modifié
 
-
-        if (compteurcoul == 4) {
-            System.out.println(Jeu_Joueur);
-            compteurcoul = 0;
-            int lignebis=ligneEncours();
-
-            if (obj1.analyse_Jeu_Joueur(lignebis,Jeu_Joueur) == true) {
-                grilleJeu.setVisible(false);
-                //grilleAnalyse.setVisible(false);
-                annonce.setText("Vous avez gagné!!!");
-            }
+       
+        
+        if (compteurcoul == 4) { // on initalise un compteur pour vérifier que l'utilisateur a bien saisi ses couleurs 
             if (Jeu_Joueur.size() == 4) {
 
-                grilleJeu.setVisible(false);
-                //grilleAnalyse.setVisible(false);
-                annonce.setText("Vous avez perdu!!!");
-
+                grilleJeu.setVisible(false); // on enlève la grille d'analyse
+                
+                annonce.setText("Vous avez perdu!!!  ");// on vérifie si l'utilisateur a gagné ou pas 
             }
+            System.out.println(Jeu_Joueur); // on affiche l'arraylist du joueur 
+            compteurcoul = 0;
+            int lignebis=ligneEncours();// la variable avec la sortie de la méthode ligne en cours 
+            annonce.setText("séléctionnez un bouton de la ligne " + (lignebis+2));//au fur et a mesure on indique à l'utilisateur  quelle ligne il doit saisir pour jouer ses combinaisons 
+            
+            
+            if (obj1.analyse_Jeu_Joueur(lignebis,Jeu_Joueur) == true) {
+                grilleJeu.setVisible(false);
+               
+                annonce.setText("Vous avez gagné!!! Vous avez gagné avec   " + (lignebis+1)+ "  coups");// donne le nombre de coups avec lequel on a gagné 
+            }
+            
+            
             
              for (int ind=0; ind < 48; ind++) {
                     if(obj1.Verif.get(ind)==true ){
@@ -1250,7 +1230,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
                             CelluleGraphique cellGraph1 = new CelluleGraphique(obj1.Indice.get(ind));
                             //cellGraph.setBackground(Color.red);
                             JPanel grilleAnalyse=grilleAnalyseEncours(lignebis);
-                            grilleAnalyse.add(cellGraph1);
+                            grilleAnalyse.add(cellGraph1);// ajoute les cellules crée au fur et à mesure de la boucle 
                                     //if (cellGraph.Pions==0) 
                             obj1.Indice.set(ind,2);// on transforme la valeur du tableau indice pour montrer qu'elle a été traitée
                             grilleAnalyse.repaint();

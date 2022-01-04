@@ -16,14 +16,14 @@ public class Grille_principale {
 
     //ne pas oublier de créer le constructeur
     // création du tableau de l'ordi
-    String[] tabOrdi = new String[4];
-    Random pions = new Random();
+    String[] tabOrdi = new String[4];// tableau comptenant le jeu aléatoire de l'ordinateuer ( celui que le joueur doit deviner)
+    Random pions = new Random();// pions aléatoires qui sont généré pour la combinaison de l'ordinateur 
     //String[][] Joueur_combi= new String[12][4];
     // création du tableau de 6 couleur:
     String[] tabCouleur = new String[6];
     //ArrayList<String> Jeu_Joueur = new ArrayList<>();
-    ArrayList<Boolean> Verif = new ArrayList<>();
-    ArrayList<Integer> Indice = new ArrayList<>();
+    ArrayList<Boolean> Verif = new ArrayList<>();// arraylist  de booleans qui permet de comptabiliser quelle case a été analysée ou pas
+    ArrayList<Integer> Indice = new ArrayList<>();// arraylist d'entier qui permet de donner des indices pour le joueur 
     String[] tabCoul2 = new String[6];
     String Case;
     //Cellule grilleColors[][]= new Cellule [12][4];
@@ -41,8 +41,8 @@ public class Grille_principale {
         
         for (int i = 0; i < 48; i++) {
             //Jeu_Joueur.add(null);
-            Verif.add(false);
-            Indice.add(-1);
+            Verif.add(false);// on rempli le tableau de vérification de false pour commencer le jeu 
+            Indice.add(-1);// on rajoute que des -1 correspondant au vide ( soit pas d'indicaion pour le joueur)
         }
 
     }
@@ -55,10 +55,10 @@ public class Grille_principale {
      */
     public String[] combinaisonaléatoire() {
         for (int i = 0; i < 4; i++) {
-            int couleur = pions.nextInt(6);
-            tabOrdi[i] = tabCouleur[couleur];
+            int couleur = pions.nextInt(6);// on génère 6 numéros alétoires correspondant a des couleurs 
+            tabOrdi[i] = tabCouleur[couleur];// on rempli le tableau de l'ordinateur avec les couleurs correspondantes
         }
-        System.out.println(Arrays.toString(tabOrdi));
+        System.out.println(Arrays.toString(tabOrdi));// on affiche l'array correspondante
         
 
         return tabOrdi;
@@ -67,47 +67,15 @@ public class Grille_principale {
     public String creation_Jeu_Joueur(int nbrecolor ){//, int indPion) {
 
         //Jeu_Joueur.add(tabCouleur[nbrecolor]);
-        return tabCouleur[nbrecolor];
+        return tabCouleur[nbrecolor];// on associe les numéros saisie par l'utilisateur aux couleurs pour afficher sa combinaison
 
     }
-    /*
-    public String analyse_coul(){
-       
-        if (grilleColors[ligne][colonne]=="R") {
-            return "R";
-        }
-        if (Jeu_Joueur.get(i)=="Y") {
-            return "Y";
-        }
-        if (Jeu_Joueur.get(i)=="G") {
-            return "G";
-        }
-        if (Jeu_Joueur.get(i)=="B") {
-             return "B";
-         }
-        if (Jeu_Joueur.get(i)=="P") {
-            return "P";
-        }
-        if (Jeu_Joueur.get(i)=="O") {
-            return "O";
-        }
-           
-        
-        return null;
-        
-    }
-    public String analyse_ind(){
-        if (Indice.get(i)=="W") {
-                return "W";
-            }
-            if (Indice.get(i)=="B") {
-                return "B";
-            }
-    }
-*/
+    
     /**
-     *
-     * @param line@return
+     *cette méthode permet d'analyser le jeu du joueur et de lui donner des indices en fonction des différentes combinaisons qu'il a fait  
+     * @param line la ligne en cours 
+     * @param Jeu_Joueur 
+     * @return des booleens en fonction de l'analyse du jeu du joueur  
      */
     public boolean analyse_Jeu_Joueur(int line, ArrayList<String> Jeu_Joueur) {//String[] tabJoueur ,
         // premiere boucle d'analyse concernant si bonne couleur + bon emplacement
@@ -116,13 +84,13 @@ public class Grille_principale {
         //clear ArrayLists
 
         int col = line * 4;
-        int compteur = 0;
+        int compteur = 0;//on initialise un compteur pour compter les 4 choix de couleur du joueur 
         for (int i = 0; i < 4; i++ ) {
 
-            if (Jeu_Joueur.get(col+i)==tabOrdi[i]){
-                if (Verif.get(col+i) != true) {
-                    Verif.set(col+i, true);
-                    Indice.set(col+i, 0);
+            if (Jeu_Joueur.get(col+i)==tabOrdi[i]){// on verifie que les combinaisons du joueur sont identiques (en indice et en couleur) avec la cmbinaisn de l'ordinateur 
+                if (Verif.get(col+i) != true) {// on verifie que la case n'a pa déja été traitée
+                    Verif.set(col+i, true);// o rajoute un true pour que la case soi marquée comme traitée 
+                    Indice.set(col+i, 0);// on ajoute un 0 dans le tbleau des indices car il y aune bonne couleur et le bon emplacement 
                     
                     compteur += 1;
                     //compteur pour savoir si 4 indices sont == a 4
@@ -131,7 +99,7 @@ public class Grille_principale {
         //System.out.println("1"+Verif.subList(col,col+4));
         //System.out.println(Indice.subList(col,col+4));
         }
-        if (compteur == 4) {
+        if (compteur == 4) {// toutes les couleurs on été saisies 
             //System.out.println("Vous avez Gagné!!!");
             //System.out.println("Le tableau indice de la forme/n" + Indice);
             //System.out.println(Verif);
@@ -147,25 +115,25 @@ public class Grille_principale {
         
         
         for (int k = col; k < col + 4; k++) {
-            if (Verif.get(k) != true) {
-                for (int j = 0; j < 4; j++) {
+            if (Verif.get(k) != true) {// on verifie que la case n'a pa déja été traitée
+                for (int j = 0; j < 4; j++) {// on parcours l'array list de la combinaison du joueur 
                     if (Jeu_Joueur.get(k) == tabOrdi[j]) {  // si on fait ca cela analyse tout le tableau array --> donc pas possible
                         
-                        if(Verif.get(col+j) != true) {
-                            for (int i = 0; i < 6; i++) {
-                                if (tabCoul2[i] == tabOrdi[j]) {// && tabCoul2[i] != "NOP") {
-                                    tabCoul2[i] = "NOP";
+                        if(Verif.get(col+j) != true) {// on verifie que la case n'a pas été traitée 
+                            for (int i = 0; i < 6; i++) {// on parcourt le tableau de base des couleurs 
+                                if (tabCoul2[i] == tabOrdi[j]) {// on check si la culeur est bien dans le tableau 
+                                    tabCoul2[i] = "NOP";// on remplace la couleur par nop pour ne pas la comptabiliser une deuxième fois pour les indices du joueur 
                                     Indice.set(k, 1);// sinon on rentre juste un 1// si identique boom on rajoute un 1 u tableau des indices 
-                                    CelluleGraphique cellGraph = new CelluleGraphique(Indice.get(k));
+                                    CelluleGraphique cellGraph = new CelluleGraphique(Indice.get(k));// on crée les cellules graphique 
                                     
-                                    Verif.set(k, true);
+                                    Verif.set(k, true);// on valide que la case a été traitée 
 
                                     break;
                                 }
                             }
                         }
                     }
-                    Verif.set(k, true);
+                    Verif.set(k, true);// on valide que la case a été traitée 
                 }
             }
         }

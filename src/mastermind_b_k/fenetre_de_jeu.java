@@ -33,7 +33,7 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
     CelluleGraphique cellGraph = new CelluleGraphique(Pions);
     int emplacement;
     JButton jButton;
-    CelluleGraphique obj2 = new CelluleGraphique(Pions);
+    CelluleGraphique obj2 = new CelluleGraphique(Pions);// création d'un objet pour faire appel au méthode de la classe cellule graphique 
     
     //Grille_principale grille= new Grille_principale() ;
 
@@ -52,63 +52,8 @@ public class fenetre_de_jeu extends javax.swing.JFrame {
             //cellGraph.Pions=-1;
 
         }
-        /*
-          Classe fenetre de jeu 
-public void indice(){
-      ligneEncours();
-      
-      obj1.analyse_Jeu_Joueur(ligne);
-      for (int i=0; i<4; i++){
-          if (obj1.Indice.get(i)==1 ){
-             grilleAnalyse.setIcon(i;img_black);
-             grilleAnalyse.repaint();
-          }  
-        else if ( obj1.Indice.get(i)==0) {
-            grilleAnalyse.setIcon(i;img_white);
-            grilleAnalyse.repaint();
-                     }  
-             
-                        
-  }
-    
-     }
-cellGraph.addActionListener(new java.awt.event.ActionListener() {
-
-                public void actionPerformed(java.awt.event.ActionEvent evt) {
-
-                    String c = cellGraph.Pions;
-                    if (c == null) {
-                        Jeu_Joueur.set(avanc(),"Attente de couleur");
-                        annonce.setText("Séléctionnez une couleur");
-                        //Jeu_Joueur.set(i,"Attente de couleur");
-                        System.out.println(Jeu_Joueur);
-                        activeButton_coul();
+        
             
-                    }else{
-                        switch (choixcoul(i)){
-                           case 0: 
-                               c.analyse_coul("R");
-                           case  1 :
-                               c.analyse_coul("P");
-                           case 2 :
-                               c.analyse_coul("G");
-                           case 3:
-                               c.analyse_coul("Y");
-                           case 4:
-                               c.analyse_coul("O");
-                           case 5:
-                               c.analyse_coul("B");
-                        }
-                    
-                        
-                    }
-                      
-                    
-           }
-
-            });
-            
-         */
 
     }
 
@@ -845,16 +790,18 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
     private void btn_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_startActionPerformed
         // TODO add your handling code here:
-        rappel.setVisible(true);
-        pannel_couleurs.setVisible(true);
-        panneau_affichage.setVisible(true);
-        initialiserPartie();
+        rappel.setVisible(true);// affiche le tableau des rappels 
+        pannel_couleurs.setVisible(true);// affiche le panneau des couleurs 
+        panneau_affichage.setVisible(true);// affiche le panneau d'affichage 
+        initialiserPartie();// on initialise la partie 
         annonce.setText("Le jeu commence: Séléctionnez une colonne");
 
-        grilleJeu.repaint();
+        grilleJeu.repaint();// on actualise la grille de jeu 
         btn_start.setEnabled(false);//pour ne pas que l'on recommence toujours une partie - désactive le bouton
     }//GEN-LAST:event_btn_startActionPerformed
-
+/*
+    *les methodes suivantes permettent de modifer la couleur 
+    */
     private void col_yellowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_col_yellowActionPerformed
         choixcoul(3);
         jButton.setIcon(obj2.img_yellow);
@@ -886,7 +833,9 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         choixcoul(4);
         jButton.setIcon(obj2.img_orange);
     }//GEN-LAST:event_col_orangeActionPerformed
-
+/*
+    *les méthodes suivantes correspondent au 48 boutons du jeu , l'utilisateur va clique sur le bouton puis on va faire appel à la méthode des couleurs pour actualiser la couleur 
+    */
     private void jButton_45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_45ActionPerformed
         annonce.setText("Séléctionnez une couleur");
         Jeu_Joueur.set(45, "attente d'une couleur");
@@ -1178,15 +1127,22 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         jButton = jButton_47;
     }//GEN-LAST:event_jButton_47ActionPerformed
 
-
-
+    /**
+     *
+     * @return la ligne en cours du jeu 
+     */
     public int ligneEncours() {
         ligne += 1;
         return ligne;
     }
     
+    /**
+     *cette méthode permet de changer de grille d'indice en fonction du tour auquel on se trouve 
+     * @param num correspond au panel de la ligne en cours 
+     * @return les grilles d'indice 
+     */
     public JPanel grilleAnalyseEncours(int num){
-        
+        // on créé les 12 panels pour les indices de chacun des tours 
         switch (num){
             case 0 :
                 return grilleAnalyse_0;
@@ -1230,6 +1186,9 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         return null;
     }
 
+    /**
+     *permet d'ativer les boutons des couleurs 
+     */
     public void activeButton_coul() {
         col_red.setEnabled(true);
         col_yellow.setEnabled(true);
@@ -1240,6 +1199,9 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
     }
 
+    /**
+     *permet de désactiver les boutons des couleurs 
+     */
     public void desactiveButton_coul() {
         col_red.setEnabled(false);
         col_yellow.setEnabled(false);
@@ -1250,7 +1212,10 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
 
     }
 
-
+    /**
+     *cette méthode permet d'nalayser les combinaisons du joueur  à chaque tour et de determiner quand il a gagné 
+     * @param indcoul indice de la couelur 
+     */
     public void choixcoul(int indcoul) {
         //desactiveButton_coul();
         compteurcoul += 1;
@@ -1258,7 +1223,7 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         //int i=avanc();
 
         int index = Jeu_Joueur.indexOf("attente d'une couleur");
-        Jeu_Joueur.set(index, obj1.creation_Jeu_Joueur(indcoul));
+        Jeu_Joueur.set(index, obj1.creation_Jeu_Joueur(indcoul));// on change dans l'arraylist pour savoir quelle case doit être modifié
 
 
         if (compteurcoul == 4) {
@@ -1301,6 +1266,9 @@ cellGraph.addActionListener(new java.awt.event.ActionListener() {
         }
     }
 
+    /**
+     *permet de commencer la partie et génère la cminaison aléatoire de l'ordinateur 
+     */
     public void initialiserPartie() {
         obj1.combinaisonaléatoire();
 

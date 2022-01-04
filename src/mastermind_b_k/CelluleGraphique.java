@@ -23,7 +23,7 @@ public class CelluleGraphique extends JButton {
     ImageIcon img_pink=new javax.swing.ImageIcon(getClass().getResource("/images/Pink.png"));
     ImageIcon img_red=new javax.swing.ImageIcon(getClass().getResource("/images/Red.png"));
     ImageIcon img_yellow=new javax.swing.ImageIcon(getClass().getResource("/images/Yellow.png"));
-    ImageIcon img_videbis=new javax.swing.ImageIcon(getClass().getResource("/images/videbis.jpg"));
+    ImageIcon img_videbis=new javax.swing.ImageIcon(getClass().getResource("/images/videbis.png"));
     ImageIcon img_white=new javax.swing.ImageIcon(getClass().getResource("/images/White.jpg"));
     ImageIcon img_black=new javax.swing.ImageIcon(getClass().getResource("/images/Black.png"));
     
